@@ -2,9 +2,6 @@ import Image from 'next/image';
 import { PARTNERS } from '@/lib/data';
 
 
-// Tripled for seamless loop
-const LOOPED_PARTNERS = [...PARTNERS, ...PARTNERS, ...PARTNERS];
-
 const Partners = () => {
     return (
         <section id="partners" className="py-12 bg-gray-50 border-y border-gray-100 overflow-hidden relative group">

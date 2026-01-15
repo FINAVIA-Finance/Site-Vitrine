@@ -19,8 +19,12 @@ import integrationImg from '@/../public/images/partenairesPage/integration.webp'
 import reportingImg from '@/../public/images/partenairesPage/reporting.png'
 import analytiqueImg from '@/../public/images/partenairesPage/analytique.webp'
 import accompagnementImg from '../../public/images/partenairesPage/accompagnement.png'
-
-
+import geoffroyImg from '@/../public/images/testimonials/Geoffroy.png'
+import ramiImg from '@/../public/images/testimonials/Rami.jpg'
+import imanImg from '@/../public/images/testimonials/Imane.png'
+import claireImg from '@/../public/images/testimonials/Claire.png'
+import michaelImg from '@/../public/images/testimonials/Michael.jpg'
+import thierryImg from '@/../public/images/testimonials/Thierry.png'
 
 
 
@@ -160,40 +164,40 @@ export const CASE_STUDIES = [
 
 export const TESTIMONIALS = [
     {
-        text: "L'accompagnement de FINAVIA a été décisif dans notre levée de fonds. Leur structuration de nos données financières a rassuré tous nos investisseurs.",
-        author: "Thomas B.",
-        role: "CEO, Tech Start-up",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150"
+        text: "L’accompagnement de Finavia a été décisif pour sécuriser et structurer l’intégration des entreprises rachetées, dans un contexte de multi-acquisitions sur des périmètres et modèles économiques distincts.",
+        author: "Geoffroy D.",
+        role: "CFO, ETI – Groupe Cybersécurité",
+        image: geoffroyImg
     },
     {
         text: "Grâce à l'automatisation mise en place, nous avons gagné 4 jours sur nos clôtures mensuelles. Une efficacité redoutable.",
-        author: "Sarah M.",
-        role: "DAF, Groupe Retail",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150"
-    },
-    {
-        text: "Une vision stratégique qui nous manquait cruellement. Les tableaux de bord mis en place nous permettent enfin de piloter nos marges par produit.",
-        author: "Julien R.",
-        role: "DG, Industrie",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150"
-    },
-    {
-        text: "L'implémentation de Pennylane s'est faite sans douleur grâce à l'expertise de l'équipe. Nos processus sont désormais fluides et sécurisés.",
-        author: "Élise D.",
-        role: "RAF, Agence Marketing",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150"
-    },
-    {
-        text: "Une clarté retrouvée dans nos flux de trésorerie. Nous pouvons enfin anticiper nos besoins de financement avec sérénité.",
-        author: "Marc L.",
-        role: "CFO, E-commerce",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150"
+        author: "Rami M.",
+        role: "RAF, Grand Groupe – Industrie jeu-vidéo",
+        image: ramiImg
     },
     {
         text: "La gestion de la paie est enfin fiabilisée. Les outils connectés nous font gagner un temps précieux chaque mois.",
-        author: "Sophie V.",
-        role: "DRH, Services B2B",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150"
+        author: "Imane Y.",
+        role: "DRH, PME – Industrie et bâtiment",
+        image: imanImg
+    },
+    {
+        text: "L'implémentation de Pennylane s'est faite sans douleur grâce à l'expertise de l'équipe. Nos processus sont désormais fluides et sécurisés.",
+        author: "Claire G.",
+        role: "DAF, PME – Solutions numériques innovantes",
+        image: claireImg
+    },
+    {
+        text: "Une vision stratégique qui nous manquait cruellement. Les tableaux de bord mis en place nous permettent enfin de piloter nos marges.",
+        author: "Michael L.",
+        role: "CEO, Franchise automobile",
+        image: michaelImg
+    },
+    {
+        text: "Une clarté retrouvée dans nos flux de trésorerie. Nous pouvons enfin anticiper nos besoins de financement avec sérénité.",
+        author: "Thierry D.",
+        role: "DAF, ETI – Sport et bien-être",
+        image: thierryImg
     }
 ];
 
