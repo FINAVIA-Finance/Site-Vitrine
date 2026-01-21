@@ -26,7 +26,7 @@ const About = () => {
                     className="relative"
                 >
                     {/* Main Portrait Image */}
-                    <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden border-4 border-white/10 shadow-2xl">
+                    <div className="relative aspect-[1/1] rounded-[2rem] overflow-hidden border-4 border-white/10 shadow-2xl">
                         <Image
                             src={decouvrezFinaviaImg}
                             alt="Portrait of a friendly financial consultant"

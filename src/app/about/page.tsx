@@ -106,6 +106,7 @@ export default function AboutPage() {
                                     </p>
                                     <a
                                         href={founder.linkedin}
+                                        target="_blank"
                                         className="inline-flex items-center gap-2 text-white font-semibold hover:text-[#e51990] transition-colors mt-auto group/link"
                                     >
                                         <Linkedin size={20} />

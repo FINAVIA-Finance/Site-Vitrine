@@ -52,7 +52,7 @@ const Footer = () => {
                             <li><Link href="/expertises" className="text-white/80 hover:text-[#e51990] transition-colors text-sm">Toutes nos expertises</Link></li>
                             <li>
                                 <a
-                                    href="https://linkedin.com"
+                                    href="https://www.linkedin.com/company/finavia-sas"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-2 text-white/80 hover:text-[#e51990] transition-colors text-sm"

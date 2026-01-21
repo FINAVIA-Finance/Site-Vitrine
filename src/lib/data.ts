@@ -271,14 +271,14 @@ export const ABOUT_PAGE_DATA = {
             role: "Co-fondatrice & Associée",
             desc: "Plus de 15 ans d'expérience en Direction comptable et transformation digitale des fonctions finance. Experte en structuration de processus comptable, déploiement d'outils finance et management d'équipes dans des environnements en forte croissance. Passionnée par l'optimisation opérationnelle des Direction finance dans la modernisation.",
             image: virginieImg,
-            linkedin: "#"
+            linkedin: "https://www.linkedin.com/in/virginie-audrain-35796348"
         },
         {
             name: "Nadia Souissi",
             role: "Co-fondatrice & Associée",
             desc: "Plus de 15 ans d'expérience en comptabilité générale et transformation digitale des services financiers. Experte en structuration de processus, dématérialisation et optimisation des systèmes comptables. Passionnée par l'automatisation intelligente et l'accompagnement des équipes vers plus d'efficacité opérationnelle.",
             image: nadiaImg,
-            linkedin: "#"
+            linkedin: "https://www.linkedin.com/in/nadia-souissi-b98bb0199"
         }
     ],
     values: [
