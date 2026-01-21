@@ -1,9 +1,10 @@
 import { LucideIcon } from 'lucide-react';
+import React from 'react';
 
 interface ContactInfoItemProps {
     icon: LucideIcon;
     label: string;
-    value: string;
+    value: string | React.ReactNode;
     light?: boolean;
 }
 
@@ -23,11 +24,11 @@ export const ContactInfoItem = ({ icon: Icon, label, value, light = false }: Con
                 }`}>
                     {label}
                 </p>
-                <p className={`font-semibold text-lg ${
+                <div className={`font-semibold text-lg ${
                     light ? 'text-white' : 'text-[#07036e]'
                 }`}>
                     {value}
-                </p>
+                </div>
             </div>
         </div>
     );

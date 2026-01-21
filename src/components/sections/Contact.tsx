@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Send, Mail, Phone, MapPin, Clock, ShieldCheck } from 'lucide-react';
+import { Send, Mail, Linkedin, ShieldCheck, ExternalLink } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import FloatingStars from '@/components/ui/FloatingStars';
 import { contactService } from '@/services/contactService';
@@ -40,11 +40,11 @@ const Contact = () => {
                 });
                 setFormData({ name: '', email: '', company: '', message: '' });
             }
-        } catch (error: any) {
+        } catch (error: unknown) {
             toast({
                 variant: "destructive",
                 title: "Erreur",
-                description: error.message || "L'envoi a échoué.",
+                description: error instanceof Error ? error.message : "L'envoi a échoué.",
             });
         } finally {
             setIsSubmitting(false);
@@ -80,14 +80,26 @@ const Contact = () => {
                         transition={{ delay: 0.2 }}
                         className="flex flex-col gap-6"
                     >
-                        <div className="bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10 text-white h-full">
-                            <h3 className="text-2xl font-bold mb-8 text-white">Informations de contact</h3>
+                        <div className="bg-white/5 backdrop-blur-md rounded-3xl p-6 border border-white/10 text-white">
+                            <h3 className="text-2xl font-bold mb-6 text-white">Informations de contact</h3>
 
-                            <div className="grid sm:grid-cols-2 gap-8">
+                            <div className="grid sm:grid-cols-2 gap-6">
                                 <ContactInfoItem icon={Mail} label="Email" value={CONTACT_INFO.email} light />
-                                <ContactInfoItem icon={Phone} label="Téléphone" value={CONTACT_INFO.phone} light />
-                                <ContactInfoItem icon={MapPin} label="Adresse" value={CONTACT_INFO.address} light />
-                                <ContactInfoItem icon={Clock} label="Horaires" value="Lun - Ven: 9h - 18h" light />
+                                <ContactInfoItem 
+                                    icon={Linkedin} 
+                                    label="LinkedIn" 
+                                    value={
+                                        <a 
+                                            href="https://www.linkedin.com/company/finavia-sas" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            className="hover:text-[#e51990] transition-colors flex items-center gap-2"
+                                        >
+                                            Suivez-nous <ExternalLink size={14} />
+                                        </a>
+                                    } 
+                                    light 
+                                />
                             </div>
                         </div>
 

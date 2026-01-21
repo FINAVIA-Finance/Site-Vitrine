@@ -2,11 +2,11 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Linkedin, MapPin, Mail, Phone, ExternalLink } from 'lucide-react';
+import { Linkedin, Mail, ExternalLink } from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';
 import { ABOUT_PAGE_DATA } from '@/lib/data';
 import StandardCTA from "@/components/sections/StandardCTA";
-import engagementsBgImg from '@/../public/images/aboutPage/EngagementsBaground.jpeg'
+import engagementsBgImg from '@/../public/images/aboutPage/EngagementsBaground.jpeg';
 
 export default function AboutPage() {
     return (
@@ -171,22 +171,21 @@ export default function AboutPage() {
                     <div className="grid lg:grid-cols-5 gap-8 items-stretch h-full">
                         <div className="lg:col-span-3 min-h-[400px] rounded-3xl overflow-hidden shadow-lg border border-gray-200 relative group">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.084196160359!2d2.288289776856525!3d48.875661600185994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f8da7582b13%3A0x6b907c6f0d14b1c7!2s12%20Av.%20de%20la%20Grande%20Arm%C3%A9e%2C%2075017%20Paris!5e0!3m2!1sen!2sfr!4v1710000000000!5m2!1sen!2sfr"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2800000!2d2.2137!3d46.2276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1710000000000!5m2!1sfr!2sfr"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0, minHeight: '100%' }}
                                 allowFullScreen={true}
                                 loading="lazy"
-                                title="Finavia Office Location"
+                                title="Carte de la France"
                                 className="grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
                             ></iframe>
                         </div>
 
                         <div className="lg:col-span-2 flex flex-col gap-6">
                             <div className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 flex-grow flex flex-col justify-center hover:shadow-lg transition-shadow duration-300">
-                                <ContactInfoItem icon={MapPin} title="Siège Social" detail={<>12 Avenue de la Grande Armée<br />75017 Paris, France</>} />
                                 <ContactInfoItem icon={Mail} title="Email" detail={<a href="mailto:contact@finavia.fr" className="hover:text-[#e51990] transition-colors">contact@finavia.fr</a>} />
-                                <ContactInfoItem icon={Phone} title="Téléphone" detail={<a href="tel:+33123456789" className="hover:text-[#e51990] transition-colors">+33 1 23 45 67 89</a>} />
+                                <ContactInfoItem icon={Linkedin} title="LinkedIn" detail={<a href="https://www.linkedin.com/company/finavia-sas" target="_blank" rel="noopener noreferrer" className="hover:text-[#e51990] transition-colors flex items-center gap-2">Suivez-nous <ExternalLink size={14} /></a>} />
                             </div>
                         </div>
                     </div>
@@ -206,7 +205,13 @@ export default function AboutPage() {
     );
 }
 
-function ContactInfoItem({ icon: Icon, title, detail }: any) {
+interface ContactInfoItemProps {
+    icon: React.ComponentType<{ size?: number }>;
+    title: string;
+    detail: React.ReactNode;
+}
+
+function ContactInfoItem({ icon: Icon, title, detail }: ContactInfoItemProps) {
     return (
         <div className="flex items-start gap-4 mb-6 last:mb-0">
             <div className="w-12 h-12 bg-[#07036e]/10 text-[#07036e] rounded-full flex items-center justify-center shrink-0">

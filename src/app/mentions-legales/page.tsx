@@ -22,8 +22,7 @@ const LegalPage = () => {
                         <p className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
                             <span className="font-bold text-gray-800">FINAVIA</span><br/>
                             SAS au capital de 10 000 €<br/>
-                            RCS Paris B 123 456 789<br/>
-                            Siège social : 12 Avenue de la Grande Armée, 75017 Paris
+                            RCS Paris B 123 456 789
                         </p>
                     </section>
 

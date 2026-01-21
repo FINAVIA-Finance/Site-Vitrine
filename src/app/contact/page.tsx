@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Phone, Mail, MapPin, CheckCircle2, ChevronDown } from 'lucide-react';
+import { Send, Mail, Linkedin, CheckCircle2, ChevronDown, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import FloatingStars from '@/components/ui/FloatingStars';
@@ -80,9 +80,22 @@ export default function ContactPage() {
                     </div>
 
                     <div className="space-y-6 bg-white/5 backdrop-blur-md p-8 rounded-[2rem] border border-white/10">
-                        <ContactInfoItem icon={Phone} label="Téléphone" value={CONTACT_INFO.phone} light />
                         <ContactInfoItem icon={Mail} label="Email" value={CONTACT_INFO.email} light />
-                        <ContactInfoItem icon={MapPin} label="Bureau" value={CONTACT_INFO.address} light />
+                        <ContactInfoItem 
+                            icon={Linkedin} 
+                            label="LinkedIn" 
+                            value={
+                                <a 
+                                    href="https://www.linkedin.com/company/finavia-sas" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="hover:text-[#e51990] transition-colors flex items-center gap-2"
+                                >
+                                    Suivez-nous <ExternalLink size={14} />
+                                </a>
+                            } 
+                            light 
+                        />
                     </div>
 
                     <div className="bg-[#e51990] p-8 rounded-[2rem] shadow-xl text-white">
