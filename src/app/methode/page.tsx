@@ -14,7 +14,10 @@ export default function MethodPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* 1. Hero Section */}
-            <section className="bg-[#07036e] text-white py-24 px-6 relative overflow-hidden pt-40">
+            <section className="text-white py-24 px-6 relative overflow-hidden pt-40"
+                style={{ 
+                    backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)'
+                }}>
                 <FloatingStars color="white" />
                 <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
                     <motion.div

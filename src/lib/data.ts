@@ -259,8 +259,7 @@ export const EXPERTISE_LINKS = [
 ];
 
 export const LEGAL_LINKS = [
-    { name: "Mentions légales", href: "/legales" },
-    { name: "FAQ", href: "#contact-footer" },
+    { name: "Informations légales", href: "/legales" },
     { name: "Contact", href: "/contact" },
 ];
 

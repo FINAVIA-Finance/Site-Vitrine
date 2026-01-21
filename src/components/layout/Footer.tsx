@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-6 relative z-10">
 
                 {/* Main Footer Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-16 pt-8 border-t border-white/10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 pt-8 border-t border-white/10">
 
                     {/* Column 1: Navigation */}
                     <div>
@@ -30,25 +30,29 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Column 2 & 3: Expertises */}
-                    <div className="md:col-span-2 lg:col-span-2">
+                    {/* Column 2: Expertises */}
+                    <div>
                         <h3 className="font-bold text-lg mb-6 text-white">Nos Expertises</h3>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
+                        <ul className="space-y-3">
                             {EXPERTISE_LINKS.map((link) => (
-                                <li key={link.href} className="list-none">
+                                <li key={link.href}>
                                     <Link href={link.href} className="text-white/80 hover:text-[#e51990] transition-colors text-sm">
                                         {link.name}
                                     </Link>
                                 </li>
                             ))}
-                        </div>
+                        </ul>
                     </div>
 
-                    {/* Column 4: Resources */}
+                    {/* Column 3: Resources */}
                     <div>
                         <h3 className="font-bold text-lg mb-6 text-white">Ressources</h3>
                         <ul className="space-y-3">
-                            <li><Link href="/legales" className="text-white/80 hover:text-[#e51990] transition-colors text-sm">Mentions légales</Link></li>
+                            <li><Link href="/legales/mentions-legales" className="text-white/80 hover:text-[#e51990] transition-colors text-sm">Mentions légales</Link></li>
+                            <li><Link href="/legales/confidentialite" className="text-white/80 hover:text-[#e51990] transition-colors text-sm">Politique de confidentialité</Link></li>
+                            <li><Link href="/legales/conditions" className="text-white/80 hover:text-[#e51990] transition-colors text-sm">Conditions d'utilisation</Link></li>
+                            <li><Link href="/legales/cookies" className="text-white/80 hover:text-[#e51990] transition-colors text-sm">Politique cookies</Link></li>
+                            <li><Link href="/legales/rgpd" className="text-white/80 hover:text-[#e51990] transition-colors text-sm">RGPD</Link></li>
                             <li><Link href="/expertises" className="text-white/80 hover:text-[#e51990] transition-colors text-sm">Toutes nos expertises</Link></li>
                             <li>
                                 <a
