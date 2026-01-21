@@ -2,7 +2,7 @@
 import { Leaf, Scale, GraduationCap, Target, Users, Zap, Clock, ShieldCheck,
     BarChart3, Settings, PieChart, Rocket,  TrendingUp, Search,
     Calculator, Briefcase, Building,LayoutDashboard,Database,
-    Cpu } from 'lucide-react';
+    Cpu, FileText, Shield, FileCheck, Cookie, Lock } from 'lucide-react';
 import partnerImg1 from '@/../public/images/homePage/partner1.jpg'
 import partnerImg2 from '@/../public/images/homePage/partner2.png'
 import homeOptimisation from '../../public/images/homePage/homeOptimisation.png'
@@ -259,7 +259,7 @@ export const EXPERTISE_LINKS = [
 ];
 
 export const LEGAL_LINKS = [
-    { name: "Mentions légales", href: "/mentions-legales" },
+    { name: "Mentions légales", href: "/legales" },
     { name: "FAQ", href: "#contact-footer" },
     { name: "Contact", href: "/contact" },
 ];
@@ -769,3 +769,282 @@ export const TECH_PARTNERS_LIST = [
         ]
     }
 ];
+
+// Legal Pages Data
+export const LEGAL_PAGES = [
+    {
+        slug: 'mentions-legales',
+        title: 'Mentions Légales',
+        description: 'Informations légales sur l\'éditeur du site, l\'hébergement et la propriété intellectuelle.',
+        icon: FileText,
+        path: '/legales/mentions-legales'
+    },
+    {
+        slug: 'politique-confidentialite',
+        title: 'Politique de Confidentialité',
+        description: 'Comment nous collectons, utilisons et protégeons vos données personnelles.',
+        icon: Shield,
+        path: '/legales/politique-confidentialite'
+    },
+    {
+        slug: 'conditions-utilisation',
+        title: 'Conditions d\'Utilisation',
+        description: 'Règles et conditions d\'utilisation de notre site web et de nos services.',
+        icon: FileCheck,
+        path: '/legales/conditions-utilisation'
+    },
+    {
+        slug: 'politique-cookies',
+        title: 'Politique Cookies',
+        description: 'Informations sur les cookies utilisés sur notre site et comment les gérer.',
+        icon: Cookie,
+        path: '/legales/politique-cookies'
+    },
+    {
+        slug: 'rgpd',
+        title: 'RGPD',
+        description: 'Vos droits concernant la protection de vos données personnelles selon le RGPD.',
+        icon: Lock,
+        path: '/legales/rgpd'
+    }
+];
+
+export const LEGAL_PAGE_CONTENT: Record<string, {
+    title: string;
+    description: string;
+    sections: Array<{
+        title: string;
+        content: string | string[];
+        highlight?: boolean;
+    }>;
+}> = {
+    'mentions-legales': {
+        title: 'Mentions Légales',
+        description: 'Informations légales sur l\'éditeur du site, l\'hébergement et la propriété intellectuelle.',
+        sections: [
+            {
+                title: 'Éditeur du site',
+                content: 'FINAVIA\nSAS au capital de 10 000 €\nRCS Paris B 123 456 789\nSiège social : [Adresse complète]\nTéléphone : [Numéro de téléphone]\nEmail : contact@finavia.fr',
+                highlight: true
+            },
+            {
+                title: 'Directeur de publication',
+                content: 'Le directeur de la publication est le représentant légal de FINAVIA.'
+            },
+            {
+                title: 'Hébergement',
+                content: 'Le site est hébergé par Vercel Inc.\n340 S Lemon Ave #4133\nWalnut, CA 91789, USA'
+            },
+            {
+                title: 'Propriété intellectuelle',
+                content: [
+                    'L\'ensemble de ce site relève de la législation française et internationale sur le droit d\'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.',
+                    'La reproduction de tout ou partie de ce site sur un support électronique ou autre est formellement interdite sauf autorisation expresse de l\'éditeur.'
+                ]
+            },
+            {
+                title: 'Responsabilité',
+                content: 'Les informations contenues sur ce site sont aussi précises que possible et le site est périodiquement remis à jour, mais peut toutefois contenir des inexactitudes, des omissions ou des lacunes. FINAVIA ne pourra être tenu responsable des dommages directs et indirects causés au matériel de l\'utilisateur, lors de l\'accès au site.'
+            }
+        ]
+    },
+    'politique-confidentialite': {
+        title: 'Politique de Confidentialité',
+        description: 'Comment nous collectons, utilisons et protégeons vos données personnelles.',
+        sections: [
+            {
+                title: 'Introduction',
+                content: 'FINAVIA s\'engage à protéger la confidentialité et la sécurité des informations personnelles que vous nous confiez. Cette politique de confidentialité explique comment nous collectons, utilisons, stockons et protégeons vos données personnelles.'
+            },
+            {
+                title: 'Données collectées',
+                content: [
+                    'Nous collectons les données suivantes :',
+                    '• Nom et prénom',
+                    '• Adresse email',
+                    '• Numéro de téléphone',
+                    '• Nom de l\'entreprise',
+                    '• Fonction',
+                    '• Informations fournies dans les formulaires de contact'
+                ]
+            },
+            {
+                title: 'Utilisation des données',
+                content: [
+                    'Vos données personnelles sont utilisées pour :',
+                    '• Répondre à vos demandes de contact',
+                    '• Vous envoyer des informations sur nos services',
+                    '• Améliorer nos services et notre site web',
+                    '• Respecter nos obligations légales et réglementaires'
+                ]
+            },
+            {
+                title: 'Partage des données',
+                content: [
+                    'Nous ne vendons, ne louons ni ne partageons vos données personnelles avec des tiers, sauf dans les cas suivants :',
+                    '• Avec votre consentement explicite',
+                    '• Pour respecter une obligation légale',
+                    '• Avec nos prestataires de services sous contrat de confidentialité'
+                ]
+            },
+            {
+                title: 'Sécurité des données',
+                content: 'Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre tout accès non autorisé, perte, destruction ou altération.'
+            },
+            {
+                title: 'Durée de conservation',
+                content: 'Vos données personnelles sont conservées pendant une durée de 3 ans à compter du dernier contact, sauf obligation légale de conservation plus longue.'
+            }
+        ]
+    },
+    'conditions-utilisation': {
+        title: 'Conditions d\'Utilisation',
+        description: 'Règles et conditions d\'utilisation de notre site web et de nos services.',
+        sections: [
+            {
+                title: 'Acceptation des conditions',
+                content: 'L\'utilisation du site web de FINAVIA implique l\'acceptation pleine et entière des présentes conditions d\'utilisation. Si vous n\'acceptez pas ces conditions, veuillez ne pas utiliser ce site.'
+            },
+            {
+                title: 'Utilisation du site',
+                content: [
+                    'Vous vous engagez à utiliser ce site de manière licite et conformément aux présentes conditions. Il est notamment interdit de :',
+                    '• Utiliser le site à des fins illégales ou non autorisées',
+                    '• Reproduire, copier ou vendre tout ou partie du site',
+                    '• Tenter d\'accéder de manière non autorisée au site ou à ses systèmes',
+                    '• Transmettre des virus ou tout code malveillant',
+                    '• Usurper l\'identité d\'une autre personne'
+                ]
+            },
+            {
+                title: 'Propriété intellectuelle',
+                content: 'Tous les contenus présents sur ce site (textes, images, logos, vidéos, etc.) sont la propriété exclusive de FINAVIA ou de ses partenaires et sont protégés par les lois françaises et internationales relatives à la propriété intellectuelle.'
+            },
+            {
+                title: 'Limitation de responsabilité',
+                content: 'FINAVIA ne pourra être tenu responsable des dommages directs ou indirects résultant de l\'utilisation ou de l\'impossibilité d\'utiliser ce site, notamment en cas d\'interruption, de bug, d\'erreur, d\'omission, de suppression de fichiers, de virus ou de tout autre problème.'
+            },
+            {
+                title: 'Modification des conditions',
+                content: 'FINAVIA se réserve le droit de modifier à tout moment les présentes conditions d\'utilisation. Les modifications prennent effet dès leur publication sur le site. Il est recommandé de consulter régulièrement cette page.'
+            },
+            {
+                title: 'Droit applicable',
+                content: 'Les présentes conditions d\'utilisation sont régies par le droit français. Tout litige relatif à leur interprétation ou à leur exécution relève de la compétence exclusive des tribunaux français.'
+            }
+        ]
+    },
+    'politique-cookies': {
+        title: 'Politique Cookies',
+        description: 'Informations sur les cookies utilisés sur notre site et comment les gérer.',
+        sections: [
+            {
+                title: 'Qu\'est-ce qu\'un cookie ?',
+                content: 'Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette, smartphone) lors de la visite d\'un site web. Il permet au site de reconnaître votre navigateur et de mémoriser certaines informations vous concernant.'
+            },
+            {
+                title: 'Types de cookies utilisés',
+                content: [
+                    'Cookies strictement nécessaires : Ces cookies sont indispensables au fonctionnement du site. Ils permettent notamment de mémoriser vos préférences et de maintenir votre session active.',
+                    'Cookies de performance : Ces cookies nous permettent d\'analyser l\'utilisation du site pour améliorer ses performances et votre expérience utilisateur.',
+                    'Cookies de fonctionnalité : Ces cookies permettent d\'améliorer les fonctionnalités du site en mémorisant vos choix et préférences.'
+                ]
+            },
+            {
+                title: 'Gestion des cookies',
+                content: [
+                    'Vous pouvez à tout moment gérer et supprimer les cookies via les paramètres de votre navigateur. Voici les liens vers les pages d\'aide des principaux navigateurs :',
+                    '• Google Chrome : https://support.google.com/chrome/answer/95647',
+                    '• Mozilla Firefox : https://support.mozilla.org/fr/kb/activer-desactiver-cookies-preferences',
+                    '• Safari : https://support.apple.com/fr-fr/guide/safari/sfri11471/mac',
+                    '• Microsoft Edge : https://support.microsoft.com/fr-fr/microsoft-edge/supprimer-les-cookies-dans-microsoft-edge-63947406-40ac-c3b8-995b-8337f5e2e44b',
+                    'Attention : La désactivation de certains cookies peut affecter le fonctionnement du site.'
+                ]
+            },
+            {
+                title: 'Cookies tiers',
+                content: 'Notre site peut contenir des cookies provenant de services tiers (analytics, réseaux sociaux, etc.). Ces cookies sont soumis aux politiques de confidentialité de ces tiers.'
+            },
+            {
+                title: 'Durée de conservation',
+                content: 'Les cookies sont conservés pour une durée maximale de 13 mois à compter de leur dépôt sur votre terminal.'
+            }
+        ]
+    },
+    'rgpd': {
+        title: 'RGPD - Protection des Données Personnelles',
+        description: 'Vos droits concernant la protection de vos données personnelles selon le RGPD.',
+        sections: [
+            {
+                title: 'Responsable du traitement',
+                content: [
+                    'Le responsable du traitement des données personnelles est FINAVIA, SAS au capital de 10 000 €, RCS Paris B 123 456 789.',
+                    'Pour toute question relative au traitement de vos données personnelles, vous pouvez nous contacter à l\'adresse : contact@finavia.fr'
+                ],
+                highlight: true
+            },
+            {
+                title: 'Base légale du traitement',
+                content: [
+                    'Le traitement de vos données personnelles est fondé sur :',
+                    '• Votre consentement (formulaires de contact, newsletter)',
+                    '• L\'exécution d\'un contrat ou de mesures précontractuelles',
+                    '• Le respect d\'une obligation légale',
+                    '• Notre intérêt légitime (amélioration de nos services)'
+                ]
+            },
+            {
+                title: 'Finalités du traitement',
+                content: [
+                    'Vos données personnelles sont traitées pour les finalités suivantes :',
+                    '• Gestion de la relation client et commerciale',
+                    '• Réponse à vos demandes de contact et de devis',
+                    '• Envoi d\'informations sur nos services',
+                    '• Amélioration de nos services et de notre site web',
+                    '• Respect de nos obligations légales et réglementaires',
+                    '• Gestion des réclamations'
+                ]
+            },
+            {
+                title: 'Destinataires des données',
+                content: [
+                    'Vos données personnelles peuvent être communiquées aux destinataires suivants :',
+                    '• Personnel autorisé de FINAVIA',
+                    '• Prestataires techniques (hébergement, maintenance)',
+                    '• Prestataires de services (envoi d\'emails, analytics)',
+                    '• Autorités compétentes en cas d\'obligation légale'
+                ]
+            },
+            {
+                title: 'Durée de conservation',
+                content: 'Les données personnelles sont conservées pendant une durée de 3 ans à compter du dernier contact avec vous, sauf obligation légale de conservation plus longue ou demande de suppression de votre part.'
+            },
+            {
+                title: 'Vos droits',
+                content: [
+                    'Conformément au RGPD, vous disposez des droits suivants :',
+                    '• Droit d\'accès : Vous pouvez obtenir une copie de vos données personnelles',
+                    '• Droit de rectification : Vous pouvez demander la correction de vos données inexactes',
+                    '• Droit à l\'effacement : Vous pouvez demander la suppression de vos données',
+                    '• Droit à la limitation : Vous pouvez demander la limitation du traitement de vos données',
+                    '• Droit à la portabilité : Vous pouvez récupérer vos données dans un format structuré',
+                    '• Droit d\'opposition : Vous pouvez vous opposer au traitement de vos données',
+                    '• Droit de retirer votre consentement : À tout moment, si le traitement est basé sur votre consentement',
+                    'Pour exercer ces droits, vous pouvez nous contacter à l\'adresse : contact@finavia.fr'
+                ]
+            },
+            {
+                title: 'Réclamation auprès de la CNIL',
+                content: 'Si vous estimez que vos droits ne sont pas respectés, vous avez la possibilité d\'introduire une réclamation auprès de la Commission Nationale de l\'Informatique et des Libertés (CNIL) : www.cnil.fr'
+            },
+            {
+                title: 'Sécurité des données',
+                content: 'Nous mettons en œuvre toutes les mesures techniques et organisationnelles appropriées pour garantir la sécurité et la confidentialité de vos données personnelles, notamment contre tout accès non autorisé, perte, destruction ou altération.'
+            },
+            {
+                title: 'Transfert de données hors UE',
+                content: 'Certaines de vos données peuvent être transférées vers des pays situés en dehors de l\'Union Européenne (notamment pour l\'hébergement). Dans ce cas, nous nous assurons que des garanties appropriées sont mises en place pour protéger vos données.'
+            }
+        ]
+    }
+};

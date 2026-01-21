@@ -44,7 +44,12 @@ const CaseStudies = () => {
     };
 
     return (
-        <section id="concrete-results" className="py-24 px-6 bg-[#07036e] relative overflow-hidden" ref={ref}>
+        <section id="concrete-results" className="py-24 px-6 relative overflow-hidden" 
+        style={{ 
+            backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)'
+         }} 
+            ref={ref}
+        >
             <FloatingStars color="white" />
             <div className="max-w-7xl mx-auto relative z-10">
 
