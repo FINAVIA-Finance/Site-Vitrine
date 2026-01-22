@@ -168,23 +168,21 @@ export default function AboutPage() {
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-5 gap-8 items-stretch h-full">
-                        <div className="lg:col-span-3 min-h-[400px] rounded-3xl overflow-hidden shadow-lg border border-gray-200 relative group">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2800000!2d2.2137!3d46.2276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1710000000000!5m2!1sfr!2sfr"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0, minHeight: '100%' }}
-                                allowFullScreen={true}
-                                loading="lazy"
-                                title="Carte de la France"
-                                className="grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-                            ></iframe>
+                    <div className="space-y-12">
+                        <div className="max-w-4xl mx-auto min-h-[500px] rounded-3xl overflow-hidden border border-gray-200 relative">
+                            <Image
+                                src="/map-france.webp"
+                                alt="Carte de la France"
+                                fill
+                                className="object-contain"
+                            />
                         </div>
 
-                        <div className="lg:col-span-2 flex flex-col gap-6">
-                            <div className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 flex-grow flex flex-col justify-center hover:shadow-lg transition-shadow duration-300">
+                        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                            <div className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-shadow duration-300">
                                 <ContactInfoItem icon={Mail} title="Email" detail={<a href="mailto:contact@finavia.fr" className="hover:text-[#e51990] transition-colors">contact@finavia.fr</a>} />
+                            </div>
+                            <div className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-shadow duration-300">
                                 <ContactInfoItem icon={Linkedin} title="LinkedIn" detail={<a href="https://www.linkedin.com/company/finavia-sas" target="_blank" rel="noopener noreferrer" className="hover:text-[#e51990] transition-colors flex items-center gap-2">Suivez-nous <ExternalLink size={14} /></a>} />
                             </div>
                         </div>
