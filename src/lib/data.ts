@@ -823,7 +823,7 @@ export const LEGAL_PAGE_CONTENT: Record<string, {
         sections: [
             {
                 title: 'Éditeur du site',
-                content: 'FINAVIA\nSAS au capital de 10 000 €\nRCS Paris B 123 456 789\nSiège social : [Adresse complète]\nTéléphone : [Numéro de téléphone]\nEmail : contact@finavia.fr',
+                content: 'FINAVIA\nSAS au capital de 2 000 €\nRCS Meaux 988 065 876\nSiège social : [56 RUE DU JEU DE PAUME, 77200 TORCY]\nTéléphone : [01 64 62 08 64]\nEmail : contact@finavia.fr',
                 highlight: true
             },
             {
