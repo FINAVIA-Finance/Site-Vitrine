@@ -977,7 +977,7 @@ export const LEGAL_PAGE_CONTENT: Record<string, {
             {
                 title: 'Responsable du traitement',
                 content: [
-                    'Le responsable du traitement des données personnelles est FINAVIA, SAS au capital de 10 000 €, RCS Paris B 123 456 789.',
+                    'Le responsable du traitement des données personnelles est FINAVIA, SAS au capital de 2 000 €, RCS Meaux 988 065 876.',
                     'Pour toute question relative au traitement de vos données personnelles, vous pouvez nous contacter à l\'adresse : contact@finavia.fr'
                 ],
                 highlight: true
