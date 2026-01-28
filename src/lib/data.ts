@@ -87,7 +87,7 @@ export const SERVICES = [
     {
         id: 1,
         category: 'strategy',
-        title: "Audit & Diagnostic des processus financier",
+        title: "Audit & Diagnostic des Processus Financier",
         icon: BarChart3,
         link: "/expertises/audit",
         description: "Une analyse approfondie de votre organisation actuelle pour évaluer la maturité de votre direction finance, identifier les risques, les leviers d’efficacité et prioriser les actions.",
@@ -114,7 +114,7 @@ export const SERVICES = [
     {
         id: 4,
         category: 'performance',
-        title: "Pilotage financier et Performance",
+        title: "Pilotage Financier et Performance",
         icon: PieChart,
         link: "/expertises/pilotage-financier",
         description: "Mise en place de tableaux de bord dynamiques et de KPIs pertinents pour piloter votre activité avec précision et anticiper l'avenir.",
@@ -123,7 +123,7 @@ export const SERVICES = [
     {
         id: 5,
         category: 'performance',
-        title: "Expertises Financières et opérations stratégiques",
+        title: "Expertises Financières et Opérations Stratégiques",
         icon: Rocket,
         link: "/expertises/expertises-avancees",
         description: "Accompagnement sur mesure dans la préparation et la sécurisation de vos opérations structurantes : levées de fonds, croissance externe, refinancement ou exigences réglementaires spécifiques.\n" +
@@ -134,7 +134,7 @@ export const SERVICES = [
 
 export const CASE_STUDIES = [
     {
-        title: "Optimisation de la trésorerie",
+        title: "Optimisation de la Trésorerie",
         image: homeOptimisation,
         points: [
             "Audit complet des flux",
