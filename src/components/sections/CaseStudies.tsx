@@ -93,13 +93,13 @@ const CaseStudies = () => {
                         </button>
                     </div>
 
-                    <div className="overflow-hidden py-8 px-4 -mx-4">
+                    <div className="overflow-hidden py-8 px-8 -mx-8">
                         {/* Slider Track */}
                         <motion.div
                             className="flex"
                             // Calculate percentage movement based on items per view
                             animate={{ x: `-${currentIndex * (100 / itemsPerView)}%` }}
-                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                            transition={{ type: "tween", ease: "easeInOut", duration: 0.4 }}
                         >
                             {CASE_STUDIES.map((study, index) => (
                                 <div
@@ -108,7 +108,7 @@ const CaseStudies = () => {
                                 >
                                     <motion.div
                                         whileHover={{ y: -10 }}
-                                        className="bg-white rounded-[2rem] overflow-hidden shadow-2xl h-full flex flex-col"
+                                        className="bg-white rounded-[2rem] overflow-hidden h-full flex flex-col"
                                     >
                                         {/* Image Top */}
                                         <div className="h-64 overflow-hidden relative">
@@ -136,8 +136,8 @@ const CaseStudies = () => {
                                             </ul>
 
                                             <div className="pt-4 border-t border-gray-100">
-                                                <Link href="#contact" className="text-[#e51990] font-bold flex items-center gap-2 hover:gap-3 transition-all uppercase text-sm tracking-wide">
-                                                    Demander un devis
+                                                <Link href="https://calendly.com/contact-finavia/30min" target="_blank" rel="noopener noreferrer" className="text-[#e51990] font-bold flex items-center gap-2 hover:gap-3 transition-all uppercase text-sm tracking-wide">
+                                                    Discutez de vos enjeux
                                                     <ArrowRight size={18} />
                                                 </Link>
                                             </div>
