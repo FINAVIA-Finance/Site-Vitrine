@@ -84,7 +84,7 @@ const Contact = () => {
                             <h3 className="text-2xl font-bold mb-6 text-white">Informations de contact</h3>
 
                             <div className="grid sm:grid-cols-2 gap-6">
-                                <ContactInfoItem icon={Mail} label="Email" value={CONTACT_INFO.email} light />
+                                <ContactInfoItem icon={Mail} label="Email" value={<a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-[#e51990] transition-colors duration-200">{CONTACT_INFO.email}</a>} light />
                                 <ContactInfoItem 
                                     icon={Linkedin} 
                                     label="LinkedIn" 

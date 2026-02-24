@@ -80,7 +80,7 @@ export default function ContactPage() {
                     </div>
 
                     <div className="space-y-6 bg-white/5 backdrop-blur-md p-8 rounded-[2rem] border border-white/10">
-                        <ContactInfoItem icon={Mail} label="Email" value={CONTACT_INFO.email} light />
+                        <ContactInfoItem icon={Mail} label="Email" value={<a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-[#e51990] transition-colors duration-200">{CONTACT_INFO.email}</a>} light />
                         <ContactInfoItem 
                             icon={Linkedin} 
                             label="LinkedIn" 
