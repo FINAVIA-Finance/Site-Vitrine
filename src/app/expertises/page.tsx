@@ -1,7 +1,9 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import FloatingStars from '@/components/ui/FloatingStars';
+import bgHero from '@/../public/images/expertisePage/auditHero.png';
 import InteractiveServices from "@/components/sections/InteractiveServices";
 import StandardCTA from "@/components/sections/StandardCTA";
 
@@ -12,9 +14,11 @@ export default function ExpertiseSelectionPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* 1. Header Section */}
-            <section className="bg-[#07036e] text-white pt-40 pb-20 px-6 mb-20 relative overflow-hidden">
+            <section className="text-white pt-40 pb-20 px-6 mb-20 relative overflow-hidden" style={{ backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' }}>
                 <FloatingStars color="white" />
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#e51990] rounded-full blur-[150px] opacity-20 pointer-events-none" />
+                <div className="absolute inset-0 z-0 opacity-5 pointer-events-none">
+                    <Image alt="Nos expertises" fill className="object-cover" src={bgHero} />
+                </div>
 
                 <div className="max-w-7xl mx-auto text-center relative z-10">
                     <motion.span

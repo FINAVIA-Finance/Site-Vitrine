@@ -60,13 +60,14 @@ export default function ExpertiseDetailPage() {
             </div>
 
             {/* 2. Hero Section */}
-            <section className="bg-[#07036e] text-white py-20 px-6 relative overflow-hidden">
+            <section className="text-white py-20 px-6 relative overflow-hidden" style={{ backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' }}>
                 <FloatingStars color="white" />
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#e51990] rounded-full filter blur-[100px] opacity-20 translate-x-1/3 -translate-y-1/3" />
-                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#00c2ff] rounded-full filter blur-[100px] opacity-10 -translate-x-1/3 translate-y-1/3" />
+                <div className="absolute inset-0 z-0 opacity-5 pointer-events-none">
+                    <Image src={data.heroImage} alt={`${data.title} Illustration`} fill className="object-cover" />
+                </div>
 
-                <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-                    <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
+                <div className="max-w-7xl mx-auto relative z-10">
+                    <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="lg:w-1/2">
                         <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full text-[#e51990] font-bold text-sm uppercase tracking-wider mb-6">
                             <Icon size={16} /> Expertise
                         </div>
@@ -77,19 +78,6 @@ export default function ExpertiseDetailPage() {
                             {data.description}
                         </p>
                     </motion.div>
-
-                    <div className="relative">
-                        <div className="absolute -inset-4 bg-gradient-to-r from-[#e51990] to-[#00c2ff] rounded-[2rem] opacity-30 blur-lg transform rotate-2"></div>
-                        <div className="relative rounded-[2rem] overflow-hidden aspect-[4/3] shadow-2xl border border-white/10 group">
-                            <Image
-                                src={data.heroImage}
-                                alt={`${data.title} Illustration`}
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-[#07036e]/20 mix-blend-multiply"></div>
-                        </div>
-                    </div>
                 </div>
             </section>
 

@@ -7,6 +7,7 @@ import FloatingStars from '@/components/ui/FloatingStars';
 import { ABOUT_PAGE_DATA } from '@/lib/data';
 import StandardCTA from "@/components/sections/StandardCTA";
 import engagementsBgImg from '@/../public/images/aboutPage/EngagementsBaground.jpeg';
+import aboutHero from '@/../public/images/aboutPage/aboutHero.png';
 
 export default function AboutPage() {
     return (
@@ -14,10 +15,10 @@ export default function AboutPage() {
             {/* 1. Header Section */}
             <section className="bg-gradient-to-b from-[#00114d] to-[#000b33] text-white pt-40 pb-24 px-6 relative overflow-hidden">
                 <FloatingStars color="white" />
-                <div className="absolute inset-0 opacity-10 pointer-events-none">
-                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#e51990] rounded-full filter blur-[100px] opacity-40" />
-                    <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#07036e] rounded-full filter blur-[100px] opacity-40" />
+                <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+                    <Image alt="À propos de Finavia" fill className="object-cover" src={aboutHero} />
                 </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#00114d] via-[#00114d]/90 to-transparent z-0 pointer-events-none"></div>
 
                 <div className="max-w-7xl mx-auto text-center relative z-10">
           <span className="text-[#e51990] font-bold text-sm uppercase tracking-wider bg-white/10 px-4 py-1 rounded-full mb-6 inline-block">
