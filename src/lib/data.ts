@@ -605,7 +605,7 @@ export const FAQ_CONTENT: Record<string, { q: string, a: string }[]> = {
 
 
 export const CONTACT_INFO = {
-    phone: "+33 1 23 45 67 89",
+    phone: "01 64 62 08 64",
     email: "contact@finavia.fr",
     address: "12 Avenue de la Grande Armée, Paris",
 };

@@ -24,7 +24,7 @@ const Partners = () => {
     return (
         <section id="partners" className="py-12 bg-gray-50 border-y border-gray-100 overflow-hidden relative">
             <div className="max-w-7xl mx-auto px-6 mb-8 text-center">
-                <p className="text-gray-500 font-medium text-sm uppercase tracking-wider">Ils nous font confiance</p>
+                <p className="text-gray-500 font-medium text-sm uppercase tracking-wider">Nos partenaires</p>
             </div>
 
             <div className="overflow-hidden">

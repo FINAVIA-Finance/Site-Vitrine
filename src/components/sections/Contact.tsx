@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Send, Mail, Linkedin, ShieldCheck, ExternalLink } from 'lucide-react';
+import { Send, Mail, Linkedin, Phone, ShieldCheck, ExternalLink } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import FloatingStars from '@/components/ui/FloatingStars';
 import { contactService } from '@/services/contactService';
@@ -85,6 +85,7 @@ const Contact = () => {
 
                             <div className="grid sm:grid-cols-2 gap-6">
                                 <ContactInfoItem icon={Mail} label="Email" value={<a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-[#e51990] transition-colors duration-200">{CONTACT_INFO.email}</a>} light />
+                                <ContactInfoItem icon={Phone} label="Téléphone" value={<a href={`tel:${CONTACT_INFO.phone}`} className="hover:text-[#e51990] transition-colors duration-200">{CONTACT_INFO.phone}</a>} light />
                                 <ContactInfoItem 
                                     icon={Linkedin} 
                                     label="LinkedIn" 
