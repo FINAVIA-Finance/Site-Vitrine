@@ -171,7 +171,7 @@ export default function AboutPage() {
                     <div className="space-y-12">
                         <div className="max-w-4xl mx-auto min-h-[500px] rounded-3xl overflow-hidden border border-gray-200 relative">
                             <Image
-                                src="/map-france.webp"
+                                src="/images/aboutPage/map-france.webp"
                                 alt="Carte de la France"
                                 fill
                                 className="object-contain"
