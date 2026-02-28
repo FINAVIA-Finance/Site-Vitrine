@@ -13,6 +13,9 @@ const inter = Inter({
 export const metadata = {
     title: "FINAVIA - Structurer. Digitaliser. Automatiser.",
     description: "Cabinet d'expertise en conseil financier",
+    icons: {
+        icon: "/images/favicon.png",
+    },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

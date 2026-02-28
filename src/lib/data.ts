@@ -3,8 +3,18 @@ import { Leaf, Scale, GraduationCap, Target, Users, Zap, Clock, ShieldCheck,
     BarChart3, Settings, PieChart, Rocket,  TrendingUp, Search,
     Calculator, Briefcase, Building,LayoutDashboard,Database,
     Cpu, FileText, Shield, FileCheck, Cookie, Lock } from 'lucide-react';
-import partnerImg1 from '@/../public/images/homePage/partner1.jpg'
-import partnerImg2 from '@/../public/images/homePage/partner2.png'
+import partnerMyReport from '@/../public/images/homePage/partner-myreport.png'
+import partnerKatech from '@/../public/images/homePage/partner-katech.png'
+import partnerAgycap from '@/../public/images/homePage/partner-agycap.png'
+import partnerFinthesis from '@/../public/images/homePage/partner-finthesis.png'
+import partnerFygr from '@/../public/images/homePage/partner-fygr.png'
+import partnerPennylane from '@/../public/images/homePage/partner-pennylane.png'
+import partnerRegate from '@/../public/images/homePage/partner-regate.png'
+import partnerSage from '@/../public/images/homePage/partner-sage.png'
+import partnerSpendesk from '@/../public/images/homePage/partner-spendesk.png'
+import partnerYooz from '@/../public/images/homePage/partner-yooz.png'
+import copilotLogo from '@/../public/images/homePage/copilot-logo.png'
+import openaiLogo from '@/../public/images/homePage/openai-logo.png'
 import homeOptimisation from '../../public/images/homePage/homeOptimisation.png'
 import homeDigitalisation from '../../public/images/homePage/homeDigitalisation.png'
 import structurationFinanciere from '../../public/images/homePage/structurationFinanciere.png'
@@ -40,16 +50,16 @@ import expertisesCtaImg from '@/../public/images/expertisePage/expertisesCta.png
 
 
 export const PARTNERS = [
-    { name: 'My report ', url:partnerImg1 },
-    { name: 'Fygr', url: partnerImg2 },
-    { name: 'Sage', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/5ae5d4805971eee08b0a799442718c7f.png' },
-    { name: 'Pennylane', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/69b204c08a820f594710ee1bbe6e01ad.png' },
-    { name: 'Spendesk', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/d55b7eaa24d1489f1e171595fd9c26be.png' },
-    { name: 'Agicap', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/c73c301d18e3913447042b755ed5c82b.png' },
-    { name: 'Regate', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/58c9aa638e910165c9d9a0a31919a77d.png' },
-    { name: 'Yooz', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/ac7ac7749038c0f772af6574de3e6035.png' },
-    { name: 'Finthesis', url: 'https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/c5fbdaf3e80a278c8ec084ef95e45a31.png' }
-
+    { name: 'My Report', url: partnerMyReport },
+    { name: 'Katech', url: partnerKatech },
+    { name: 'Sage', url: partnerSage },
+    { name: 'Pennylane', url: partnerPennylane },
+    { name: 'Spendesk', url: partnerSpendesk },
+    { name: 'Agycap', url: partnerAgycap },
+    { name: 'Regate', url: partnerRegate },
+    { name: 'Yooz', url: partnerYooz },
+    { name: 'Finthesis', url: partnerFinthesis },
+    { name: 'Fygr', url: partnerFygr },
 ];
 
 export const METRICS = [
@@ -610,20 +620,18 @@ export const CONTACT_SERVICES = [
 ];
 
 export const PARTNER_LOGOS = {
-    // Existing (Verified)
-    pennylane: "https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/69b204c08a820f594710ee1bbe6e01ad.png",
-    spendesk: "https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/d55b7eaa24d1489f1e171595fd9c26be.png",
-    agicap: "https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/c73c301d18e3913447042b755ed5c82b.png",
-    regate: "https://horizons-cdn.hostinger.com/c4931007-62f8-47ef-9dbf-72bcd125e057/58c9aa638e910165c9d9a0a31919a77d.png",
-
-
-    fygr: "https://cdn.prod.website-files.com/61b07ae5cfb75630fbc03d22/6379f6e396fd6b5dd3837b82_Logo_Fygr.svg",
-    sage: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAgCAMAAABw3UvaAAAAaVBMVEX///8A1TEA1jcA1CkA1CMA0xr2/vi58MLz/fYA0QBo4n6k7LD7//2r7bY521l55ItB3F6Z6qaN55sx2lOI55jY995I3WTJ9NHl+ukm2Uyz771R3mt044bS9tjF880a2ERa4HLt/PCA5ZHZ7UzHAAACJUlEQVQ4jZVV25arMAgNgVg1Veu1Wm+p//+Rh1y068zMWjPhpUHYSDYbK4QQN7PLsnmLSEtKAjZUOhLYMmqpSpKqiMK9CGb/K/EeA5wlpu7QAd1igFK2/tATNnHA3R/uKouiZ5D09KfxGYMTmkn5erf0P5aS5OfgBJLa1yfwnIGwPUeTHhJRLmNwVxssw5VmBRKpCsrJFSAiUOkKbwrZBQjqqBRYl3afvA0MDbEcJXa6Y1E82OuVpEFro7w6OlZJrusSwRK6cZtjByhVzX0q6ardJ0n8vARy5Z4cTWwZ7K3bIGqxZZljs+Jqb2GAVtfFqGDgTMj9BWqbWgEGLnYOcqq/eQ5Y8FRloKGVKAo8CR8JFjFZUd6PfFls2qWclaAT/mrWDKhEI21hJAqM18ots9zhwN50FT3Efr0xB3q/EJqr6iEegIm4L4atS61yfKvcV2HTtw9wZFL74KnNclJ/5l2QbO16jKyDVKxKwnoBxcwPaztQnTFLb5J+gbZd9U45mDeG3DjEwsG5MrkFjiIFDmK1hpdo7uDRHBPncl9J6z4doDoXXJR1spGb44EmxmqDpteJZOXYz4y/+mtQPLCz7JqjwoPZ8/z2FRE3PAcGq0nh1J3S/cW2mTfo8XveT1CWXMy2pqUJpwKhiwBqOt+TWuX83ZwmnL0vuf/JeI+CHrXdjghjdRornM3tY4SNJAHzpY3+fxDj5P+RKBLHdlvKydTpt+f/ANKxGsLyet1sAAAAAElFTkSuQmCC",
-    finthesis: "https://www.finthesis.io/favicon.ico",
-    myreport: "https://www.myreport.fr/favicon.ico",
-    yooz: "https://www.getyooz.com/wp-content/uploads/logo-yooz-workmark-1.svg",
-    copilot: "data:image/png;base64,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",
-    openai: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/512px-OpenAI_Logo.svg.png",
+    pennylane: partnerPennylane,
+    spendesk: partnerSpendesk,
+    agicap: partnerAgycap,
+    regate: partnerRegate,
+    fygr: partnerFygr,
+    sage: partnerSage,
+    finthesis: partnerFinthesis,
+    myreport: partnerMyReport,
+    yooz: partnerYooz,
+    katech: partnerKatech,
+    copilot: copilotLogo,
+    openai: openaiLogo,
 };
 
 export const TRANSFORMATION_OBJECTIVES = [
