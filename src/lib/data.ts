@@ -2,7 +2,8 @@
 import { Leaf, Scale, GraduationCap, Target, Users, Zap, Clock, ShieldCheck,
     BarChart3, Settings, PieChart, Rocket,  TrendingUp, Search,
     Calculator, Briefcase, Building,LayoutDashboard,Database,
-    Cpu, FileText, Shield, FileCheck, Cookie, Lock } from 'lucide-react';
+    Cpu, FileText, Shield, FileCheck, Cookie, Lock,
+    Trophy, Lightbulb, Handshake } from 'lucide-react';
 import partnerMyReport from '@/../public/images/homePage/partner-myreport.png'
 import partnerKatech from '@/../public/images/homePage/partner-katech.png'
 import partnerAgycap from '@/../public/images/homePage/partner-agycap.png'
@@ -118,8 +119,8 @@ export const SERVICES = [
         title: "Digitalisation et Automatisation",
         icon: Zap,
         link: "/expertises/digitalisation",
-        description: "Transformation de votre écosystème financier par la mise en place de facturation électronique et l'intégration d'outils modernes d’automatisation des tâches à faible valeur ajoutée.",
-        benefits: ["Gain de productivité", "conformité règlementaire ", "Données temps réel"]
+        description: "Digitalisation et automatisation de votre fonction finance, avec un accompagnement complet pour se conformer à la réglementation de la facturation électronique obligatoire dès septembre 2026, et l'intégration d'outils d'automatisation et d'lA pour fiabiliser vos données et libérer vos équipes des tâches répétitives.",
+        benefits: ["Gain de productivité", "Conformité règlementaire ", "Données temps réel"]
     },
     {
         id: 4,
@@ -294,22 +295,22 @@ export const ABOUT_PAGE_DATA = {
         {
             title: "Excellence",
             text: "Nous visons la perfection dans chaque mission, en apportant une expertise technique irréprochable et des solutions concrètes.",
-            icon: "🏆"
+            icon: Trophy
         },
         {
             title: "Innovation",
             text: "Nous repoussons les limites de la finance traditionnelle en intégrant les meilleures technologies d'automatisation.",
-            icon: "💡"
+            icon: Lightbulb
         },
         {
             title: "Proximité",
             text: "Nous travaillons main dans la main avec vos équipes pour garantir une adoption fluide et durable des nouveaux processus.",
-            icon: "🤝"
+            icon: Handshake
         },
         {
             title: "Intégrité",
             text: "La confiance est notre capital le plus précieux. Nous agissons avec transparence, éthique et confidentialité absolue.",
-            icon: "🛡️"
+            icon: ShieldCheck
         }
     ],
     commitments: [

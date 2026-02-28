@@ -41,7 +41,7 @@ export default function PartnersPage() {
                             Nous sélectionnons et intégrons les meilleures solutions du marché (IA, Compta, Tréso) pour automatiser vos processus et fiabiliser votre pilotage.
                         </p>
                         <Button asChild className="bg-[#e51990] hover:bg-[#c01478] text-white text-lg px-8 py-6 rounded-full shadow-lg">
-                            <Link href="/contact">Demander une démo <ArrowRight className="ml-2" /></Link>
+                            <Link href="/contact">Échanger sur votre contexte <ArrowRight className="ml-2" /></Link>
                         </Button>
                     </motion.div>
 
@@ -102,7 +102,7 @@ export default function PartnersPage() {
                                     </div>
                                 </div>
                                 <Button asChild variant="outline" className="mt-8 border-[#07036e] text-[#07036e] hover:bg-[#07036e] hover:text-white transition-all">
-                                    <Link href="/contact">Demander une démo</Link>
+                                    <Link href="/contact">Échanger sur votre contexte</Link>
                                 </Button>
                             </div>
                             <div className={`h-80 rounded-3xl overflow-hidden shadow-2xl relative ${idx % 2 !== 0 ? 'md:order-1' : ''}`}>
@@ -164,7 +164,7 @@ export default function PartnersPage() {
             <StandardCTA
                 variant="enjeux"
                 title="Prêt à moderniser votre finance ?"
-                description="Prenez rendez-vous pour une démonstration personnalisée de nos outils partenaires."
+                description="Prenez rendez-vous afin de déterminer les solutions adaptées à votre contexte"
                 buttonText="Prendre rendez-vous"
                 buttonHref="/contact"
             />

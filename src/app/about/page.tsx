@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { Linkedin, Mail, Phone, ExternalLink } from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';
 import { ABOUT_PAGE_DATA } from '@/lib/data';
 import StandardCTA from "@/components/sections/StandardCTA";
@@ -57,7 +57,9 @@ export default function AboutPage() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {ABOUT_PAGE_DATA.values.map((val, idx) => (
                                 <div key={idx} className="bg-white rounded-2xl p-6 shadow-lg border border-blue-100 hover:shadow-xl transition-shadow group">
-                                    <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform">{val.icon}</div>
+                                    <div className="text-[#07036e] mb-4 transform group-hover:scale-110 transition-transform">
+                                        <val.icon size={32} />
+                                    </div>
                                     <h4 className="text-xl font-bold text-[#07036e] mb-2">{val.title}</h4>
                                     <p className="text-sm text-gray-600 leading-relaxed">{val.text}</p>
                                 </div>
@@ -178,9 +180,12 @@ export default function AboutPage() {
                             />
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                             <div className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-shadow duration-300">
                                 <ContactInfoItem icon={Mail} title="Email" detail={<a href="mailto:contact@finavia.fr" className="hover:text-[#e51990] transition-colors">contact@finavia.fr</a>} />
+                            </div>
+                            <div className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-shadow duration-300">
+                                <ContactInfoItem icon={Phone} title="Téléphone" detail={<a href="tel:0164620864" className="hover:text-[#e51990] transition-colors">01 64 62 08 64</a>} />
                             </div>
                             <div className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-shadow duration-300">
                                 <ContactInfoItem icon={Linkedin} title="LinkedIn" detail={<a href="https://www.linkedin.com/company/finavia-sas" target="_blank" rel="noopener noreferrer" className="hover:text-[#e51990] transition-colors flex items-center gap-2">Suivez-nous <ExternalLink size={14} /></a>} />
@@ -196,6 +201,7 @@ export default function AboutPage() {
                 isGradientTitle={true}
                 title="transformation finance"
                 description="Chaque entreprise est unique. Prenons 30 minutes pour analyser vos enjeux et identifier les leviers de croissance immédiats."
+                buttonHref="https://calendly.com/contact-finavia/30min"
                 showSecondaryButton={true}
                 showStatus={true}
             />

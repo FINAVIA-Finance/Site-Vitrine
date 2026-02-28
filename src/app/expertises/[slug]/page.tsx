@@ -159,14 +159,16 @@ export default function ExpertiseDetailPage() {
                                     Nos experts sont là pour vous guider vers la solution la plus adaptée à votre situation.
                                 </p>
                                 {/* Button 1: Formulaire Audit */}
-                                <motion.button
-                                    onClick={() => openModal('audit')}
+                                <motion.a
+                                    href="https://calendly.com/contact-finavia/30min"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     whileHover={{ scale: 1.05 }}
                                     className="w-full bg-[#e51990] text-white text-lg font-bold py-4 rounded-full shadow-xl flex items-center justify-center gap-3 group"
                                 >
                                     <span>Parler à un expert</span>
                                     <ArrowRight className="group-hover:translate-x-2 transition-transform duration-300" />
-                                </motion.button>
+                                </motion.a>
                                 <div className="mt-6 flex items-center justify-center gap-4 text-sm text-gray-500">
                      <span className="flex items-center gap-2">
                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>

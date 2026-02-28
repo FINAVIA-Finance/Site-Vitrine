@@ -78,9 +78,7 @@ export default function StandardCTA({
                     {isGradientTitle ? (
                         <>
                             Discutons de votre <br/>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e51990] to-white">
-                                {title}
-                            </span>
+                            {title}
                         </>
                     ) : title}
                 </h2>
@@ -91,14 +89,22 @@ export default function StandardCTA({
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <Button asChild className={`rounded-full px-10 font-bold transition-all shadow-xl ${s.btn} ${variant === 'light' ? 'h-16' : 'py-7 text-lg'}`}>
-                        <Link href={buttonHref}>
-                            {buttonText} <ArrowRight className="ml-2" size={20} />
-                        </Link>
+                        {buttonHref.startsWith('http') ? (
+                            <a href={buttonHref} target="_blank" rel="noopener noreferrer">
+                                {buttonText} <ArrowRight className="ml-2" size={20} />
+                            </a>
+                        ) : (
+                            <Link href={buttonHref}>
+                                {buttonText} <ArrowRight className="ml-2" size={20} />
+                            </Link>
+                        )}
                     </Button>
 
                     {showSecondaryButton && (
-                        <Button variant="outline" className={`rounded-full px-8 py-7 text-lg backdrop-blur-sm ${s.secondary}`}>
-                            <Mail className="mr-2 h-5 w-5" /> Nous écrire
+                        <Button asChild variant="outline" className={`rounded-full px-8 py-7 text-lg backdrop-blur-sm ${s.secondary}`}>
+                            <Link href="/contact">
+                                <Mail className="mr-2 h-5 w-5" /> Nous écrire
+                            </Link>
                         </Button>
                     )}
                 </div>
