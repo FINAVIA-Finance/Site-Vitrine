@@ -38,7 +38,7 @@ export default function PartnersPage() {
                         <p className="text-xl text-white/80 leading-relaxed font-light mb-8 max-w-xl">
                             Nous sélectionnons et intégrons les meilleures solutions du marché (IA, Compta, Tréso) pour automatiser vos processus et fiabiliser votre pilotage.
                         </p>
-                        <Button asChild className="bg-[#e51990] hover:bg-[#c01478] text-white text-lg px-8 py-6 rounded-full shadow-lg">
+                        <Button asChild className="text-white text-lg px-8 py-6 rounded-full shadow-lg hover:opacity-90" style={{ backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' }}>
                             <Link href="/contact">Échanger sur votre contexte <ArrowRight className="ml-2" /></Link>
                         </Button>
                     </motion.div>

@@ -94,7 +94,7 @@ export default function MethodPage() {
                                         <div className="space-y-3 pt-6 border-t border-gray-100">
                                             {step.benefits.map((benefit, i) => (
                                                 <div key={i} className="flex items-center gap-3">
-                                                    <CheckCircle2 size={20} className="text-[#00c2ff] shrink-0" />
+                                                    <CheckCircle2 size={20} className="text-[#e51990] shrink-0" />
                                                     <span className="text-gray-700 font-medium">{benefit}</span>
                                                 </div>
                                             ))}
@@ -119,7 +119,7 @@ export default function MethodPage() {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
                         {METHODOLOGY_PAGE_DATA.advantages.map((adv, idx) => (
                             <div key={idx} className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center group">
-                                <div className="w-14 h-14 mx-auto bg-[#07036e]/5 text-[#07036e] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#e51990] group-hover:text-white transition-colors">
+                                <div className="w-14 h-14 mx-auto bg-[#e51990]/10 text-[#e51990] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#e51990] group-hover:text-white transition-colors">
                                     <adv.icon size={28} />
                                 </div>
                                 <h4 className="font-bold text-[#07036e] mb-2">{adv.title}</h4>

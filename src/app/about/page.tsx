@@ -58,7 +58,7 @@ export default function AboutPage() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {ABOUT_PAGE_DATA.values.map((val, idx) => (
                                 <div key={idx} className="bg-white rounded-2xl p-6 shadow-lg border border-blue-100 hover:shadow-xl transition-shadow group">
-                                    <div className="text-[#07036e] mb-4 transform group-hover:scale-110 transition-transform">
+                                    <div className="text-[#e51990] mb-4 transform group-hover:scale-110 transition-transform">
                                         <val.icon size={32} />
                                     </div>
                                     <h4 className="text-xl font-bold text-[#07036e] mb-2">{val.title}</h4>
@@ -205,6 +205,7 @@ export default function AboutPage() {
                 buttonHref="https://calendly.com/contact-finavia/30min"
                 showSecondaryButton={true}
                 showStatus={true}
+                buttonStyle={{ backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' }}
             />
         </div>
     );

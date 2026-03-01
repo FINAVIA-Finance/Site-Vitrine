@@ -105,7 +105,7 @@ const Contact = () => {
                         </div>
 
                         {/* Reassurance Card */}
-                        <div className="bg-gradient-to-br from-[#e51990] to-[#c01478] rounded-3xl p-8 text-white shadow-xl flex items-center gap-6">
+                        <div className="rounded-3xl p-8 text-white shadow-xl flex items-center gap-6" style={{ backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' }}>
                             <ShieldCheck size={48} className="shrink-0 opacity-80" />
                             <div>
                                 <h4 className="font-bold text-lg">Confidentialité Garantie</h4>
@@ -131,9 +131,10 @@ const Contact = () => {
                                 disabled={isSubmitting}
                                 whileHover={{ scale: 1.01 }}
                                 whileTap={{ scale: 0.99 }}
-                                className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-all ${
-                                    isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#e51990] hover:bg-[#c01478] text-white shadow-lg hover:shadow-[#e51990]/20'
+                                className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-all text-white shadow-lg ${
+                                    isSubmitting ? 'bg-gray-400 cursor-not-allowed' : ''
                                 }`}
+                                style={!isSubmitting ? { backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' } : undefined}
                             >
                                 {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
                                 <Send size={18} />

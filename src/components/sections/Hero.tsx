@@ -61,15 +61,15 @@ const Hero = () => {
                         </motion.div>
 
                         <h1 className="relative z-10 text-5xl md:text-6xl font-bold leading-[0.95] md:leading-[1.05] ">
-              <span className="bg-gradient-to-r from-[#0b1a9c] to-[#07036e] bg-clip-text text-transparent">
+              <span className="bg-[linear-gradient(to_right,#23135f_15%,#d0006f_100%)] bg-clip-text text-transparent">
                 Structurer.
               </span>
                             <br />
-                            <span className="bg-gradient-to-r from-[#07036e] to-[#0b1a9c] bg-clip-text text-transparent">
+                            <span className="bg-[linear-gradient(to_right,#23135f_15%,#d0006f_100%)] bg-clip-text text-transparent">
                 Digitaliser.
               </span>
                             <br />
-                            <span className="text-[#e51990]">
+                            <span className="bg-[linear-gradient(to_right,#23135f_15%,#d0006f_100%)] bg-clip-text text-transparent">
                 Automatiser.
               </span>
                         </h1>
@@ -84,7 +84,7 @@ const Hero = () => {
                                 <motion.div
                                     whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(229, 25, 144, 0.3)' }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="px-8 py-4 bg-[#e51990] text-white rounded-full font-semibold flex items-center justify-center gap-2 shadow-lg transition-all duration-300 cursor-pointer"
+                                    className="px-8 py-4 text-white rounded-full font-semibold flex items-center justify-center gap-2 shadow-lg transition-all duration-300 cursor-pointer" style={{ backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' }}
                                 >
                                     Réservez votre appel gratuit
                                     <ArrowRight size={20} />

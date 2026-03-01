@@ -15,6 +15,7 @@ interface CTAProps {
     showSecondaryButton?: boolean;
     showStatus?: boolean;
     isGradientTitle?: boolean;
+    buttonStyle?: React.CSSProperties;
 }
 
 export default function StandardCTA({
@@ -25,7 +26,8 @@ export default function StandardCTA({
                                         variant = 'navy',
                                         showSecondaryButton = false,
                                         showStatus = false,
-                                        isGradientTitle = false
+                                        isGradientTitle = false,
+                                        buttonStyle
                                     }: CTAProps) {
 
     const styles = {
@@ -33,7 +35,7 @@ export default function StandardCTA({
             section: "bg-[#07036e] py-20",
             title: "text-white text-3xl md:text-5xl",
             desc: "text-white/80",
-            btn: "bg-[#e51990] hover:bg-[#c01478] text-white",
+            btn: "bg-[linear-gradient(to_right,#23135f_15%,#d0006f_100%)] hover:opacity-90 text-white",
             secondary: "bg-transparent border-white/20 text-white hover:bg-white/10"
         },
         pink: {
@@ -54,7 +56,7 @@ export default function StandardCTA({
             section: "bg-[#07036e] py-20",
             title: "text-3xl md:text-5xl text-white",
             desc: "text-white/80",
-            btn: "bg-[#e51990] hover:bg-[#c01478] text-white",
+            btn: "bg-[linear-gradient(to_right,#23135f_15%,#d0006f_100%)] hover:opacity-90 text-white",
             secondary: ""
         }
     };
@@ -88,7 +90,7 @@ export default function StandardCTA({
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <Button asChild className={`rounded-full px-10 font-bold transition-all shadow-xl ${s.btn} ${variant === 'light' ? 'h-16' : 'py-7 text-lg'}`}>
+                    <Button asChild className={`rounded-full px-10 font-bold transition-all shadow-xl ${buttonStyle ? 'text-white' : s.btn} ${variant === 'light' ? 'h-16' : 'py-7 text-lg'}`} style={buttonStyle}>
                         {buttonHref.startsWith('http') ? (
                             <a href={buttonHref} target="_blank" rel="noopener noreferrer">
                                 {buttonText} <ArrowRight className="ml-2" size={20} />

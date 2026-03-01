@@ -116,7 +116,7 @@ export default function ClientChallengesPage() {
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {BENEFITS_DATA.map((benefit, idx) => (
                             <div key={idx} className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/10 shadow-xl hover:bg-white/15 transition-all text-center group">
-                                <div className="w-16 h-16 mx-auto bg-white/20 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                                <div className="w-16 h-16 mx-auto bg-[#e51990]/20 rounded-2xl flex items-center justify-center text-[#e51990] mb-6 group-hover:scale-110 transition-transform">
                                     <benefit.icon size={32} />
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>

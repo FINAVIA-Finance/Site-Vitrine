@@ -152,7 +152,7 @@ export default function ExpertiseDetailPage() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     whileHover={{ scale: 1.05 }}
-                                    className="w-full bg-[#e51990] text-white text-lg font-bold py-4 rounded-full shadow-xl flex items-center justify-center gap-3 group"
+                                    className="w-full text-white text-lg font-bold py-4 rounded-full shadow-xl flex items-center justify-center gap-3 group hover:opacity-90" style={{ backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' }}
                                 >
                                     <span>Parler à un expert</span>
                                     <ArrowRight className="group-hover:translate-x-2 transition-transform duration-300" />
@@ -202,7 +202,7 @@ export default function ExpertiseDetailPage() {
                                 <motion.button
                                     onClick={() => openModal('resource')}
                                     whileHover={{ scale: 1.05 }}
-                                    className="bg-[#e51990] text-white text-lg font-bold py-4 px-8 rounded-full shadow-lg shadow-[#e51990]/30 flex items-center gap-3 group"
+                                    className="text-white text-lg font-bold py-4 px-8 rounded-full shadow-lg flex items-center gap-3 group hover:opacity-90" style={{ backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' }}
                                 >
                                     Obtenez une estimation <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                                 </motion.button>

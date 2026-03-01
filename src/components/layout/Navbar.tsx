@@ -134,7 +134,7 @@ const Navbar = () => {
                             ))}
                             <Link
                                 href="/contact"
-                                className="text-xl font-bold px-6 py-4 rounded-2xl bg-[#e51990] text-white text-center mt-4"
+                                className="text-xl font-bold px-6 py-4 rounded-2xl text-white text-center mt-4" style={{ backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' }}
                             >
                                 Contactez-nous
                             </Link>
