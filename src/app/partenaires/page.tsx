@@ -4,11 +4,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, CheckCircle2, Settings, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import FloatingStars from '@/components/ui/FloatingStars';
 import {
-    PARTNER_LOGOS,
     TRANSFORMATION_OBJECTIVES,
     INTEGRATION_STEPS,
     INTEGRATION_BLOCKS,
@@ -16,7 +15,6 @@ import {
 } from '@/lib/data';
 import StandardCTA from "@/components/sections/StandardCTA";
 import partenairesHeroImg from '@/../public/images/partenairesPage/partenairesHero.jpeg'
-import bgHeroImg from '@/../public/images/partenairesPage/backgroundHeroSection.jpeg'
 
 export default function PartnersPage() {
     return (
@@ -25,12 +23,12 @@ export default function PartnersPage() {
             <section className="relative bg-[#07036e] text-white pt-48 pb-24 px-6 overflow-hidden rounded-b-[3rem]">
                 <FloatingStars color="white" />
                 <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-                    <Image alt="Modern financial software" fill className="object-cover" src={bgHeroImg} />
+                    <Image alt="Modern financial software" fill className="object-cover" src={partenairesHeroImg} />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#07036e] via-[#07036e]/90 to-transparent z-0 pointer-events-none"></div>
 
-                <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-                    <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
+                <div className="max-w-7xl mx-auto relative z-10">
+                    <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="lg:w-1/2">
             <span className="text-[#e51990] font-bold text-sm uppercase tracking-wider bg-white/10 px-4 py-1 rounded-full mb-6 inline-block">
               Écosystème & Innovation
             </span>
@@ -41,15 +39,8 @@ export default function PartnersPage() {
                             Nous sélectionnons et intégrons les meilleures solutions du marché (IA, Compta, Tréso) pour automatiser vos processus et fiabiliser votre pilotage.
                         </p>
                         <Button asChild className="bg-[#e51990] hover:bg-[#c01478] text-white text-lg px-8 py-6 rounded-full shadow-lg">
-                            <Link href="/contact">Demander une démo <ArrowRight className="ml-2" /></Link>
+                            <Link href="/contact">Échanger sur votre contexte <ArrowRight className="ml-2" /></Link>
                         </Button>
-                    </motion.div>
-
-                    <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative hidden lg:block">
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 transform rotate-2 hover:rotate-0 transition-transform duration-500 aspect-[4/3]">
-                            <Image src={partenairesHeroImg} alt="Dashboard" fill className="object-cover" />
-                            <div className="absolute inset-0 bg-[#07036e]/20"></div>
-                        </div>
                     </motion.div>
                 </div>
             </section>
@@ -102,7 +93,7 @@ export default function PartnersPage() {
                                     </div>
                                 </div>
                                 <Button asChild variant="outline" className="mt-8 border-[#07036e] text-[#07036e] hover:bg-[#07036e] hover:text-white transition-all">
-                                    <Link href="/contact">Demander une démo</Link>
+                                    <Link href="/contact">Échanger sur votre contexte</Link>
                                 </Button>
                             </div>
                             <div className={`h-80 rounded-3xl overflow-hidden shadow-2xl relative ${idx % 2 !== 0 ? 'md:order-1' : ''}`}>
@@ -164,7 +155,7 @@ export default function PartnersPage() {
             <StandardCTA
                 variant="enjeux"
                 title="Prêt à moderniser votre finance ?"
-                description="Prenez rendez-vous pour une démonstration personnalisée de nos outils partenaires."
+                description="Prenez rendez-vous afin de déterminer les solutions adaptées à votre contexte"
                 buttonText="Prendre rendez-vous"
                 buttonHref="/contact"
             />

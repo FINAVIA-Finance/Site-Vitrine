@@ -58,7 +58,7 @@ const CaseStudies = () => {
                     initial={{ opacity: 0, y: -20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-20"
+                    className="text-center"
                 >
           <span className="text-[#e51990] font-bold text-sm uppercase tracking-wider bg-white/10 px-4 py-1 rounded-full">
             Nos résultats concrets

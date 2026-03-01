@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, Linkedin, CheckCircle2, ChevronDown, ExternalLink } from 'lucide-react';
+import { Send, Mail, Linkedin, Phone, CheckCircle2, ChevronDown, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import FloatingStars from '@/components/ui/FloatingStars';
@@ -81,6 +81,7 @@ export default function ContactPage() {
 
                     <div className="space-y-6 bg-white/5 backdrop-blur-md p-8 rounded-[2rem] border border-white/10">
                         <ContactInfoItem icon={Mail} label="Email" value={<a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-[#e51990] transition-colors duration-200">{CONTACT_INFO.email}</a>} light />
+                        <ContactInfoItem icon={Phone} label="Téléphone" value={<a href={`tel:${CONTACT_INFO.phone}`} className="hover:text-[#e51990] transition-colors duration-200">{CONTACT_INFO.phone}</a>} light />
                         <ContactInfoItem 
                             icon={Linkedin} 
                             label="LinkedIn" 

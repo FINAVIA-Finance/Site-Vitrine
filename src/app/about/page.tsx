@@ -2,11 +2,12 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { Linkedin, Mail, Phone, ExternalLink } from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';
 import { ABOUT_PAGE_DATA } from '@/lib/data';
 import StandardCTA from "@/components/sections/StandardCTA";
 import engagementsBgImg from '@/../public/images/aboutPage/EngagementsBaground.jpeg';
+import aboutHero from '@/../public/images/aboutPage/aboutHero.png';
 
 export default function AboutPage() {
     return (
@@ -14,10 +15,10 @@ export default function AboutPage() {
             {/* 1. Header Section */}
             <section className="bg-gradient-to-b from-[#00114d] to-[#000b33] text-white pt-40 pb-24 px-6 relative overflow-hidden">
                 <FloatingStars color="white" />
-                <div className="absolute inset-0 opacity-10 pointer-events-none">
-                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#e51990] rounded-full filter blur-[100px] opacity-40" />
-                    <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#07036e] rounded-full filter blur-[100px] opacity-40" />
+                <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+                    <Image alt="À propos de Finavia" fill className="object-cover" src={aboutHero} />
                 </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#00114d] via-[#00114d]/90 to-transparent z-0 pointer-events-none"></div>
 
                 <div className="max-w-7xl mx-auto text-center relative z-10">
           <span className="text-[#e51990] font-bold text-sm uppercase tracking-wider bg-white/10 px-4 py-1 rounded-full mb-6 inline-block">
@@ -57,7 +58,9 @@ export default function AboutPage() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {ABOUT_PAGE_DATA.values.map((val, idx) => (
                                 <div key={idx} className="bg-white rounded-2xl p-6 shadow-lg border border-blue-100 hover:shadow-xl transition-shadow group">
-                                    <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform">{val.icon}</div>
+                                    <div className="text-[#07036e] mb-4 transform group-hover:scale-110 transition-transform">
+                                        <val.icon size={32} />
+                                    </div>
                                     <h4 className="text-xl font-bold text-[#07036e] mb-2">{val.title}</h4>
                                     <p className="text-sm text-gray-600 leading-relaxed">{val.text}</p>
                                 </div>
@@ -178,9 +181,12 @@ export default function AboutPage() {
                             />
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                             <div className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-shadow duration-300">
                                 <ContactInfoItem icon={Mail} title="Email" detail={<a href="mailto:contact@finavia.fr" className="hover:text-[#e51990] transition-colors">contact@finavia.fr</a>} />
+                            </div>
+                            <div className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-shadow duration-300">
+                                <ContactInfoItem icon={Phone} title="Téléphone" detail={<a href="tel:0164620864" className="hover:text-[#e51990] transition-colors">01 64 62 08 64</a>} />
                             </div>
                             <div className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-shadow duration-300">
                                 <ContactInfoItem icon={Linkedin} title="LinkedIn" detail={<a href="https://www.linkedin.com/company/finavia-sas" target="_blank" rel="noopener noreferrer" className="hover:text-[#e51990] transition-colors flex items-center gap-2">Suivez-nous <ExternalLink size={14} /></a>} />
@@ -196,6 +202,7 @@ export default function AboutPage() {
                 isGradientTitle={true}
                 title="transformation finance"
                 description="Chaque entreprise est unique. Prenons 30 minutes pour analyser vos enjeux et identifier les leviers de croissance immédiats."
+                buttonHref="https://calendly.com/contact-finavia/30min"
                 showSecondaryButton={true}
                 showStatus={true}
             />

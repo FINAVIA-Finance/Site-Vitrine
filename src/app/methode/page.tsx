@@ -14,16 +14,19 @@ export default function MethodPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* 1. Hero Section */}
-            <section className="text-white py-24 px-6 relative overflow-hidden pt-40"
-                style={{ 
-                    backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)'
-                }}>
+            <section className="relative text-white pt-48 pb-24 px-6 overflow-hidden rounded-b-[3rem]"
+                style={{ backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' }}>
                 <FloatingStars color="white" />
-                <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+                <div className="absolute inset-0 z-0 opacity-5 pointer-events-none">
+                    <Image alt="Méthodologie Finavia" fill className="object-cover" src={methodeHero} />
+                </div>
+
+                <div className="max-w-7xl mx-auto relative z-10">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
+                        className="lg:w-1/2"
                     >
             <span className="text-[#e51990] font-bold text-sm uppercase tracking-wider bg-white/10 px-4 py-1.5 rounded-full mb-6 inline-block">
               Notre Approche
@@ -34,22 +37,6 @@ export default function MethodPage() {
                         <p className="text-xl text-white/80 font-light leading-relaxed mb-8">
                             Une méthodologie éprouvée pour transformer votre direction financière en véritable partenaire stratégique.
                         </p>
-                    </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8 }}
-                        className="relative"
-                    >
-                        <div className="absolute inset-0 bg-[#e51990] rounded-[2rem] transform rotate-3 blur-lg opacity-30"></div>
-                        <div className="relative rounded-[2rem] shadow-2xl border-4 border-white/10 w-full h-[450px] overflow-hidden">
-                            <Image
-                                src={methodeHero}
-                                alt="Méthodologie Finavia"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
                     </motion.div>
                 </div>
             </section>

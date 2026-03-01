@@ -132,7 +132,6 @@ const Hero = () => {
                                     ✓
                                 </div>
                                 <div>
-                                    <p className="font-bold text-[#07036e]">+250%</p>
                                     <p className="text-sm text-gray-600">Croissance moyenne</p>
                                 </div>
                             </div>
