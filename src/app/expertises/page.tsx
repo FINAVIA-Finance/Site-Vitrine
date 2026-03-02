@@ -45,10 +45,10 @@ export default function ExpertiseSelectionPage() {
             {/* 3. CTA Section */}
             <StandardCTA
                 variant="light"
-                title="Besoin d'une estimation financière ?"
-                description="Nos experts peuvent réaliser un diagnostic rapide pour identifier vos priorités."
-                buttonText="Demander conseil"
-                buttonHref="/contact"
+                title="Besoin de structurer votre organisation financière ?"
+                description="Échangeons ensemble sur vos enjeux actuels."
+                buttonText="Planifiez un échange"
+                buttonHref="https://calendly.com/contact-finavia/30min"
             />
         </div>
     );

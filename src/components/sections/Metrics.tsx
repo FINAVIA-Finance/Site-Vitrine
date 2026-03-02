@@ -1,34 +1,10 @@
 "use client";
 
-import { useRef, useEffect, useState } from 'react';
-import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import FloatingStars from '@/components/ui/FloatingStars';
 import { CheckCircle2 } from 'lucide-react';
 import { METRICS } from '@/lib/data';
-
-
-const SmoothCounter = ({ value, suffix, isInView }: { value: number; suffix: string; isInView: boolean }) => {
-    const count = useMotionValue(0);
-    const rounded = useTransform(count, (latest) => Math.round(latest));
-    const [displayValue, setDisplayValue] = useState(0);
-
-    useEffect(() => {
-        if (isInView) {
-            const controls = animate(count, value, {
-                duration: 2,
-                ease: "easeOut"
-            });
-            // Update local state for display
-            const unsubscribe = rounded.on("change", (v) => setDisplayValue(v));
-            return () => {
-                controls.stop();
-                unsubscribe();
-            };
-        }
-    }, [isInView, value, count, rounded]);
-
-    return <span>{displayValue}{suffix}</span>;
-};
 
 
 const Metrics = () => {
@@ -69,8 +45,8 @@ const Metrics = () => {
                             <div className="absolute inset-0 bg-gradient-to-br from-transparent to-gray-50 opacity-0 group-hover:opacity-100 transition-opacity" />
 
                             <div className="relative z-10 flex flex-col h-full">
-                                <div className={`text-5xl md:text-6xl font-extrabold ${metric.color} mb-3 tracking-tight`}>
-                                    <SmoothCounter value={metric.value} suffix={metric.suffix} isInView={isInView} />
+                                <div className={`text-5xl md:text-6xl font-extrabold mb-3 tracking-tight ${metric.color}`}>
+                                    {metric.value}
                                 </div>
 
                                 <p className="text-[#07036e] font-bold uppercase tracking-wider text-sm mb-6 border-b border-gray-100 pb-4 mx-8">
