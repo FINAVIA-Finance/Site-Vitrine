@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import {Toaster} from "@/components/ui/toaster";
+import CookieBanner from "@/components/cookies/CookieBanner";
 
 // Set up Inter font
 const inter = Inter({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Toaster/>
         <Footer/>
+        <CookieBanner /> 
         </body>
         </html>
     );
