@@ -93,10 +93,17 @@ export default function ExpertiseDetailPage() {
                                 Caractéristiques Clés
                             </h2>
                             <div className="grid md:grid-cols-2 gap-6">
-                                {data.objectives.map((obj: string, i: number) => (
+                                {data.objectives.map((obj: string | { title: string; detail: string }, i: number) => (
                                     <div key={i} className="flex items-start gap-3 bg-gray-50 p-5 rounded-xl border border-gray-100 hover:shadow-md transition-shadow relative z-20">
                                         <CheckCircle2 className="text-[#e51990] shrink-0 mt-1" size={20} />
-                                        <p className="text-gray-700 font-medium">{obj}</p>
+                                        {typeof obj === 'string' ? (
+                                            <p className="text-gray-700 font-medium">{obj}</p>
+                                        ) : (
+                                            <div>
+                                                <p className="text-[#07036e] font-bold">{obj.title}</p>
+                                                <p className="text-gray-500 text-sm mt-0.5">{obj.detail}</p>
+                                            </div>
+                                        )}
                                     </div>
                                 ))}
                             </div>
@@ -191,25 +198,48 @@ export default function ExpertiseDetailPage() {
                <span className="inline-block px-4 py-1.5 rounded-full bg-[#07036e]/10 text-[#07036e] font-bold text-sm tracking-wide mb-6 w-fit">
                  Accompagnement Sur Mesure
                </span>
-                            <h3 className="text-3xl md:text-4xl font-bold text-[#07036e] mb-6">
-                                Besoin d'un accompagnement ?
-                            </h3>
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                                Transformez ce défi en opportunité de croissance. Obtenez une estimation précise et découvrez comment nous pouvons structurer votre réussite.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4 items-start">
-                                {/* Button 2: Formulaire Lead Magnet (PDF) */}
-                                <motion.button
-                                    onClick={() => openModal('resource')}
+                            {data.suitability ? (
+                                <>
+                                    <h3 className="text-3xl md:text-4xl font-bold text-[#07036e] mb-6">
+                                        {data.suitability.title}
+                                    </h3>
+                                    <ul className="space-y-3 mb-8">
+                                        {data.suitability.items.map((item: string, i: number) => (
+                                            <li key={i} className="flex items-start gap-3">
+                                                <CheckCircle2 className="text-[#e51990] shrink-0 mt-0.5" size={20} />
+                                                <span className="text-gray-700 text-base md:text-lg leading-relaxed">{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </>
+                            ) : (
+                                <>
+                                    <h3 className="text-3xl md:text-4xl font-bold text-[#07036e] mb-6">
+                                        Besoin d'un accompagnement ?
+                                    </h3>
+                                    <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                        Transformez ce défi en opportunité de croissance. Obtenez une estimation précise et découvrez comment nous pouvons structurer votre réussite.
+                                    </p>
+                                </>
+                            )}
+                            <div className="flex flex-col sm:flex-row gap-4 items-center">
+                                <motion.a
+                                    href="https://calendly.com/contact-finavia/30min"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     whileHover={{ scale: 1.05 }}
                                     className="text-white text-lg font-bold py-4 px-8 rounded-full shadow-lg flex items-center gap-3 group hover:opacity-90" style={{ backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' }}
                                 >
-                                    Obtenez une estimation <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                                </motion.button>
-                                <div className="flex items-center gap-2 text-gray-500 py-4 px-2">
-                                    <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                                    <span className="text-sm font-medium">Réponse sous 24h</span>
-                                </div>
+                                    Échanger avec un(e) expert(e) <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                                </motion.a>
+                                <Link href="/contact">
+                                    <motion.div
+                                        whileHover={{ scale: 1.05 }}
+                                        className="text-[#07036e] text-lg font-bold py-4 px-8 rounded-full border-2 border-[#07036e] flex items-center gap-3 group hover:bg-[#07036e] hover:text-white transition-colors cursor-pointer"
+                                    >
+                                        Contactez-nous <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                                    </motion.div>
+                                </Link>
                             </div>
                         </div>
                         <div className="h-64 md:h-auto md:w-[45%] lg:w-[40%] relative order-1 md:order-2">

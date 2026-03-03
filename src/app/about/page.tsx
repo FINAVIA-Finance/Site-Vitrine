@@ -25,10 +25,10 @@ export default function AboutPage() {
             Notre Identité
           </span>
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 tracking-tight">
-                        Transformer la finance<br />pour libérer la croissance
+                        Transformez et modernisez<br />votre direction financière
                     </h1>
-                    <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto font-light leading-relaxed">
-                        Nés de la conviction que la direction financière doit être un moteur de stratégie et non un simple centre de coûts, nous accompagnons les entreprises vers l'excellence opérationnelle.
+                    <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto font-light leading-relaxed">
+                        Nous sommes convaincues que la direction financière doit être un moteur de pilotage et de performance. Finavia accompagne les entreprises sur le terrain, en combinant expertise humaine, structuration financière et outils intelligents, pour transformer la finance en un levier de croissance concret.
                     </p>
                 </div>
             </section>
@@ -85,7 +85,7 @@ export default function AboutPage() {
                             Rencontrez nos fondatrices
                         </h2>
                         <p className="mt-4 text-lg text-white/80 font-light">
-                            40 ans d'expérience cumulée au service de votre performance
+                            +30 ans d'expérience cumulée au service de votre performance
                         </p>
                     </div>
 
@@ -167,7 +167,7 @@ export default function AboutPage() {
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-[#07036e] mb-4">Où nous trouver</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
-                            Basés au cœur de Paris, nous intervenons dans toute la France pour accompagner votre transformation.
+                            Basés en Île-de-France, nous intervenons dans toute la France pour accompagner votre transformation.
                         </p>
                     </div>
 

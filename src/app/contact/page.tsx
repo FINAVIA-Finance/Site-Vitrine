@@ -99,7 +99,7 @@ export default function ContactPage() {
                         />
                     </div>
 
-                    <div className="bg-[#e51990] p-8 rounded-[2rem] shadow-xl text-white">
+                    <div className="p-8 rounded-[2rem] shadow-xl text-white" style={{ backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' }}>
                         <h3 className="font-bold flex items-center gap-2 mb-4 text-lg">
                             <CheckCircle2 size={22} /> Pourquoi nous ?
                         </h3>

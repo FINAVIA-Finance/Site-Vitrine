@@ -51,7 +51,7 @@ export default function PartnersPage() {
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-[#07036e]">Objectifs de Transformation</h2>
-                        <p className="text-gray-500 mt-4">Une stack technologique adaptée à chaque enjeu stratégique.</p>
+                        <p className="text-gray-500 mt-4 max-w-2xl mx-auto">Définissez les bases d'une fonction finance agile et efficace, avec des outils intelligents qui facilitent le pilotage et l'exécution au quotidien.</p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-8">
                         {TRANSFORMATION_OBJECTIVES.map((obj, idx) => (
@@ -63,8 +63,8 @@ export default function PartnersPage() {
                                 <p className="text-gray-600 mb-6 text-sm">{obj.desc}</p>
                                 <div className="flex flex-wrap gap-4 items-center opacity-70 grayscale group-hover:grayscale-0 transition-all">
                                     {obj.logos.map((logo, lIdx) => (
-                                        <div key={lIdx} className="relative h-6 w-[100px]">
-                                            <Image src={logo} alt="Partner" fill className="object-contain" />
+                                        <div key={lIdx} className="relative h-8 w-[120px]">
+                                            <Image src={logo} alt="Partner" fill className={logo.src.includes('yooz') ? 'object-cover' : 'object-contain'} />
                                         </div>
                                     ))}
                                 </div>

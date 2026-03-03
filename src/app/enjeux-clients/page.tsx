@@ -18,7 +18,7 @@ import symptomesImg from '../../../public/images/enjeuxClientsPage/symptomesFina
 import heroBgImg from '@/../public/images/enjeuxClientsPage/heroBackground.png'
 
 export default function ClientChallengesPage() {
-    const [activeSector, setActiveSector] = useState('Direction Financière / DAF');
+    const [activeSector, setActiveSector] = useState('Clôture & Fiabilité des Chiffres');
     const [openQuestion, setOpenQuestion] = useState<number | null>(null);
     const [searchQuery, setSearchQuery] = useState('');
 
@@ -47,8 +47,7 @@ export default function ClientChallengesPage() {
                             Vos Enjeux,<br /> Notre Priorité
                         </h1>
                         <p className="text-xl text-white/80 leading-relaxed font-light mb-8 max-w-xl">
-                            Les directions financières font face à une pression inédite. <br/>
-                            Nous transformons ces contraintes en leviers de performance.
+                            Les directions financières font face à une pression inédite. Nous transformons ces contraintes en leviers de performance en modernisant vos processus, vos outils et la qualité de votre donnée, intégrant l'automatisation et l'IA lorsque cela crée de la valeur.
                         </p>
                     </motion.div>
                 </div>
@@ -111,7 +110,7 @@ export default function ClientChallengesPage() {
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-white">Ce que vous y gagnez</h2>
-                        <p className="text-blue-200 mt-4">Des résultats mesurables et durables.</p>
+                        <p className="text-blue-200 mt-4">Des résultats durables et une fonction finance modernisée, automatisée et prête pour l'avenir.</p>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {BENEFITS_DATA.map((benefit, idx) => (
@@ -133,7 +132,7 @@ export default function ClientChallengesPage() {
                 <div className="max-w-6xl mx-auto relative z-10">
                     <div className="text-center mb-12">
                         <span className="text-[#e51990] font-bold text-sm uppercase tracking-wider">Expertise Sectorielle</span>
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#07036e] mt-2 mb-6">Questions Fréquentes par Métier</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#07036e] mt-2 mb-6">Questions fréquentes par problématiques clés</h2>
                         <div className="max-w-md mx-auto relative">
                             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
                             <input
