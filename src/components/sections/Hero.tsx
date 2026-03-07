@@ -118,23 +118,7 @@ const Hero = () => {
                                 aria-label="Présentation Finavia - transformation financière"
                             />
                             <div className="absolute inset-0 bg-gradient-to-tr from-[#0b1a9c]/20 to-[#e51990]/20" />
-                        </div>
-
-                        {/* Floating Card */}
-                        <motion.div
-                            animate={{ y: [0, -10, 0] }}
-                            transition={{ duration: 3, repeat: Infinity }}
-                            className="absolute -bottom-8 -left-8 bg-white/90 backdrop-blur-lg rounded-2xl p-6 shadow-2xl border border-gray-100 z-20"
-                        >
-                            <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-gradient-to-br from-[#e51990] to-[#c01478] rounded-full flex items-center justify-center text-white font-bold text-xl">
-                                    ✓
-                                </div>
-                                <div>
-                                    <p className="text-sm text-gray-600">Croissance moyenne</p>
-                                </div>
-                            </div>
-                        </motion.div>
+                        </div>              
                     </motion.div>
                 </div>
             </div>

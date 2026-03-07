@@ -84,20 +84,6 @@ const FAQ = () => {
                         </motion.div>
                     </AnimatePresence>
                 </div>
-
-                {/* Fallback CTA */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={isInView ? { opacity: 1 } : {}}
-                    transition={{ delay: 0.5 }}
-                    className="mt-12 text-center"
-                >
-                    <p className="text-gray-500 mb-4">Vous ne trouvez pas votre réponse ?</p>
-                    <a href="#contact" className="inline-flex items-center gap-2 text-[#07036e] font-bold hover:text-[#e51990] transition-colors group">
-                        <MessageCircle size={20} className="group-hover:scale-110 transition-transform" />
-                        Contactez notre équipe support
-                    </a>
-                </motion.div>
             </div>
         </section>
     );

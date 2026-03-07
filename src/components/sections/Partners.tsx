@@ -6,14 +6,14 @@ const LogoStrip = () => (
         {PARTNERS.map((partner, index) => (
             <div
                 key={`${partner.name}-${index}`}
-                className="flex-shrink-0 h-20 w-40 flex items-center justify-center transition-all duration-500 opacity-80 hover:opacity-100 hover:scale-105"
+                className="flex-shrink-0 h-14 w-32 flex items-center justify-center transition-all duration-500 opacity-80 hover:opacity-100 hover:scale-105"
             >
                 <Image
                     src={partner.url}
                     alt={`${partner.name} logo`}
-                    width={160}
-                    height={48}
-                    className="w-auto object-contain"
+                    width={128}
+                    height={56}
+                    className="max-h-full max-w-full w-auto h-auto object-contain"
                 />
             </div>
         ))}
