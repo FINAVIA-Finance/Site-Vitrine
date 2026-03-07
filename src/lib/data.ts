@@ -74,7 +74,7 @@ export const METRICS = [
     {
         value: '98%',
         label: 'SATISFACTION CLIENTS ',
-        color: 'text-[#0b1a9c]',
+        color: 'bg-[linear-gradient(to_right,#23135f_15%,#d0006f_100%)] bg-clip-text text-transparent',
         details: ['Fidélisation forte', 'Recommandation', 'Suivi long terme']
     },
     {
@@ -629,18 +629,18 @@ export const FAQ_CONTENT: Record<string, { q: string, a: string }[]> = {
         { q: "Pourquoi mon reporting n'est jamais aligné avec la compta ?", a: "On aligne plan comptable et axes analytiques, automatise la récupération des chiffres et garantit que reporting et compta parlent le même langage." }
     ],
     'Pilotage & Performance': [
-        { q: "Quels KPIs suivre selon notre activité ?", a: "On identifie les KPIs vraiment pertinents pour votre entreprise : trésorerie, BFR, marge par produit, DSO, coûts unitaires, taux de croissance ou CAC/LTV selon votre modèle. Ces indicateurs permettent de suivre la performance, détecter les écarts et prendre des décisions éclairées." },
-        { q: "Comment automatiser un reporting clair et fiable ?", a: "En fiabilisant la donnée source, on met en place des outils et processus qui récupèrent automatiquement les informations, vérifient leur cohérence et produisent des reportings clairs, précis et disponibles en temps réel." },
-        { q: "Comment piloter la trésorerie et le BFR ?", a: "On structure un prévisionnel glissant et des rituels de pilotage hebdomadaires avec des outils simples, alertes automatiques et prévisions régulières, pour anticiper les besoins et sécuriser la liquidité." },
-        { q: "Comment construire un budget et un forecast robustes ?", a: "On définit une méthodologie claire, aligne les hypothèses avec les équipes opérationnelles et automatise la consolidation pour créer des budgets et prévisions fiables et rapidement actualisables." },
-        { q: "Comment piloter la performance quand la donnée est peu fiable ?", a: "On commence par fiabiliser la donnée source, corrige les anomalies et structure les flux pour que les indicateurs reflètent la réalité, permettant un pilotage précis et des décisions éclairées." }
-    ],
-    'Processus, Organisation & Contrôle Interne': [
         { q: "Comment structurer efficacement la fonction finance ?", a: "On définit les missions clés, met en place des processus clairs et responsabilise les équipes pour une fonction finance organisée, réactive et alignée sur les besoins opérationnels." },
         { q: "Quels processus documenter en priorité ?", a: "On identifie les processus critiques (clôture, reporting, trésorerie, commandes et facturation) et les documente pour sécuriser les flux et faciliter la continuité." },
         { q: "Comment clarifier les rôles et responsabilités ?", a: "On répartit les missions critiques, crée des checklists et formalise les responsabilités pour que chacun sache exactement ce qu'il doit faire." },
         { q: "Comment renforcer le contrôle interne sans alourdir les équipes ?", a: "On met en place des contrôles ciblés et automatisés, des doubles regards et des checklists accessibles pour sécuriser les opérations tout en gardant l'équipe agile." },
         { q: "Comment cartographier et optimiser nos workflows ?", a: "On visualise chaque flux, identifie les points de blocage et met en place des optimisations concrètes et automatisations simples pour gagner en temps et en fiabilité." }
+    ],
+    'Processus, Organisation & Contrôle Interne': [
+        { q: "Quels KPIs suivre selon notre activité ?", a: "On identifie les KPIs vraiment pertinents pour votre entreprise : trésorerie, BFR, marge par produit, DSO, coûts unitaires, taux de croissance ou CAC/LTV selon votre modèle. Ces indicateurs permettent de suivre la performance, détecter les écarts et prendre des décisions éclairées." },
+        { q: "Comment automatiser un reporting clair et fiable ?", a: "En fiabilisant la donnée source, on met en place des outils et processus qui récupèrent automatiquement les informations, vérifient leur cohérence et produisent des reportings clairs, précis et disponibles en temps réel." },
+        { q: "Comment piloter la trésorerie et le BFR ?", a: "On structure un prévisionnel glissant et des rituels de pilotage hebdomadaires avec des outils simples, alertes automatiques et prévisions régulières, pour anticiper les besoins et sécuriser la liquidité." },
+        { q: "Comment construire un budget et un forecast robustes ?", a: "On définit une méthodologie claire, aligne les hypothèses avec les équipes opérationnelles et automatise la consolidation pour créer des budgets et prévisions fiables et rapidement actualisables." },
+        { q: "Comment piloter la performance quand la donnée est peu fiable ?", a: "On commence par fiabiliser la donnée source, corrige les anomalies et structure les flux pour que les indicateurs reflètent la réalité, permettant un pilotage précis et des décisions éclairées." }
     ],
     'Digitalisation, Outils & Automatisation': [
         { q: "Comment choisir les bons outils finance ?", a: "On identifie vos besoins, votre organisation et vos flux, puis on sélectionne des outils modernes et intelligents, incluant l'IA si besoin, pour automatiser, fiabiliser et faciliter le pilotage de votre finance." },
