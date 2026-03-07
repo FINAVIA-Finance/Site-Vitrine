@@ -2,9 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
-import mainHeroImg from '@/../public/images/homePage/homeMainHero.png'
 
 const Hero = () => {
     return (
@@ -110,13 +108,14 @@ const Hero = () => {
                         className="lg:col-span-7 relative h-full flex items-center"
                     >
                         <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                            <Image
-                                src={mainHeroImg}
-                                alt="Financial consulting dashboard analysis by team"
-                                fill
-                                className="object-cover"
-                                priority // Critical for LCP
-                                sizes="(max-width: 1024px) 100vw, 58vw"
+                            <video
+                                src="/videos/homePageHero.mp4"
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                className="absolute inset-0 w-full h-full object-cover"
+                                aria-label="Présentation Finavia - transformation financière"
                             />
                             <div className="absolute inset-0 bg-gradient-to-tr from-[#0b1a9c]/20 to-[#e51990]/20" />
                         </div>
