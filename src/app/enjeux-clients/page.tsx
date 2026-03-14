@@ -131,7 +131,6 @@ export default function ClientChallengesPage() {
                 <FloatingStars color="pink" />
                 <div className="max-w-6xl mx-auto relative z-10">
                     <div className="text-center mb-12">
-                        <span className="text-[#e51990] font-bold text-sm uppercase tracking-wider">Expertise Sectorielle</span>
                         <h2 className="text-3xl md:text-4xl font-bold text-[#07036e] mt-2 mb-6">Questions fréquentes par problématiques clés</h2>
                         <div className="max-w-md mx-auto relative">
                             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />

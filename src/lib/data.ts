@@ -14,7 +14,7 @@ import partnerRegate from '@/../public/images/homePage/partner-regate.png'
 import partnerSage from '@/../public/images/homePage/partner-sage.png'
 import partnerSpendesk from '@/../public/images/homePage/partner-spendesk.png'
 import partnerYooz from '@/../public/images/homePage/partner-yooz.png'
-import copilotLogo from '@/../public/images/homePage/copilot-logo.png'
+import copilotFullLogo from '@/../public/images/homePage/copilot-full-logo.png'
 import openaiLogo from '@/../public/images/homePage/openai-logo.png'
 import claudaiLogo from '@/../public/images/homePage/partner-claudai.png'
 import homeOptimisation from '../../public/images/homePage/homeOptimisation.png'
@@ -395,7 +395,7 @@ export const METHODOLOGY_PAGE_DATA = {
     poles: [
         { title: "Audit", icon: BarChart3, path: "/expertises/audit" },
         { title: "Structuration", icon: Settings, path: "/expertises/structuration-finance" },
-        { title: "Automatisation", icon: Zap, path: "/expertises/digitalisation" },
+        { title: "Digitalisation / Automatisation", icon: Zap, path: "/expertises/digitalisation" },
         { title: "Pilotage", icon: PieChart, path: "/expertises/pilotage-financier" },
         { title: "Expertises Avancées", icon: Rocket, path: "/expertises/expertises-avancees" }
     ]
@@ -685,7 +685,7 @@ export const PARTNER_LOGOS = {
     myreport: partnerMyReport,
     yooz: partnerYooz,
     katech: partnerKatech,
-    copilot: copilotLogo,
+    copilot: copilotFullLogo,
     openai: openaiLogo,
     claudai: claudaiLogo,
 };
@@ -693,8 +693,8 @@ export const PARTNER_LOGOS = {
 export const TRANSFORMATION_OBJECTIVES = [
     {
         icon: Rocket,
-        title: "Conformité à la facturation électronique",
-        desc: "Assurez la conformité à la réglementation de la facturation électronique (obligatoire à partir de septembre 2026) tout en automatisant vos flux, sans mobiliser toute l'équipe finance.",
+        title: "Créer une direction financière performante",
+        desc: "Déployez les fondamentaux d'une finance moderne et agile avec les meilleurs outils du marchéAssurez la conformité à la réglementation de la facturation électronique (obligatoire à partir de septembre 2026) tout en automatisant vos flux, sans mobiliser toute l'équipe finance.",
         logos: [
             PARTNER_LOGOS.pennylane,
             PARTNER_LOGOS.agicap,
@@ -705,18 +705,18 @@ export const TRANSFORMATION_OBJECTIVES = [
     },
     {
         icon: LayoutDashboard,
-        title: "Structurer la direction financière",
-        desc: "Automatisez vos tâches répétitives et vos workflows avec des outils intelligents et des agents IA, pour plus de fiabilité et de temps pour piloter.",
+        title: "Conformité à la facturation électronique",
+        desc: "Assurez la conformité à la réglementation de la facturation électronique (obligatoire à partir de septembre 2026) tout en automatisant vos flux, sans mobiliser toute l'équipe finance.",
         logos: [
-            PARTNER_LOGOS.yooz,
             PARTNER_LOGOS.pennylane,
-            PARTNER_LOGOS.sage
+            PARTNER_LOGOS.regate,
+            PARTNER_LOGOS.fygr
         ]
     },
     {
         icon: Zap,
         title: "Digitaliser les workflows et automatiser",
-        desc: "Produisez des reportings précis et fiables, accessibles en temps réel, pour piloter votre activité avec confiance.",
+        desc: "Automatisez vos tâches répétitives et vos workflows avec des outils intelligents et des agents IA, pour plus de fiabilité et de temps pour piloter.",
         logos: [
             PARTNER_LOGOS.yooz,
             PARTNER_LOGOS.pennylane,
@@ -729,7 +729,7 @@ export const TRANSFORMATION_OBJECTIVES = [
     {
         icon: Database,
         title: "Fiabiliser le pilotage et le reporting",
-        desc: "Gagnez en visibilité avec des reportings fiables, précis et disponibles en temps réel.",
+        desc: "Produisez des reportings précis et fiables, accessibles en temps réel, pour piloter votre activité avec confiance.",
         logos: [
             PARTNER_LOGOS.finthesis,
             PARTNER_LOGOS.myreport,
@@ -770,10 +770,10 @@ export const INTEGRATION_BLOCKS = [
     {
         id: "03",
         tag: "DÉPLOIEMENT",
-        title: "Accompagner la transition et la mise en production de la nouvelle solution",
+        title: "Sécuriser la mise en production et la transition opérationnelle",
         image: analytiqueImg,
         color: "bg-[#07036e]/10",
-        actions: "Migrer les données historiques, mettre en place le support utilisateurs et valider le bon fonctionnement opérationnel.",
+        actions: "Piloter la migration des données historiques, accompagner la bascule opérationnelle et valider le bon fonctionnement des processus clés.",
         benefits: "Garantir la continuité opérationnelle et sécuriser l'intégrité des données."
     },
     {
@@ -826,7 +826,8 @@ export const TECH_PARTNERS_LIST = [
         icon: Cpu,
         partners: [
             { name: "Microsoft Copilot", logo: PARTNER_LOGOS.copilot },
-            { name: "Open AI", logo: PARTNER_LOGOS.openai }
+            { name: "Open AI", logo: PARTNER_LOGOS.openai },
+            { name: "Claude AI", logo: PARTNER_LOGOS.claudai },
         ]
     }
 ];

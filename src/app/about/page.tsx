@@ -2,233 +2,267 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Linkedin, Mail, Phone, ExternalLink } from 'lucide-react';
+import {ExternalLink, Linkedin, Mail, Phone} from 'lucide-react';
 import FloatingStars from '@/components/ui/FloatingStars';
-import { ABOUT_PAGE_DATA } from '@/lib/data';
+import {ABOUT_PAGE_DATA} from '@/lib/data';
 import StandardCTA from "@/components/sections/StandardCTA";
 import engagementsBgImg from '@/../public/images/aboutPage/EngagementsBaground.jpeg';
 import aboutHero from '@/../public/images/aboutPage/aboutHero.png';
 
 export default function AboutPage() {
-    return (
-        <div className="min-h-screen bg-white">
-            {/* 1. Header Section */}
-            <section className="bg-gradient-to-b from-[#00114d] to-[#000b33] text-white pt-40 pb-24 px-6 relative overflow-hidden">
-                <FloatingStars color="white" />
-                <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-                    <Image alt="À propos de Finavia" fill className="object-cover" src={aboutHero} />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#00114d] via-[#00114d]/90 to-transparent z-0 pointer-events-none"></div>
+  return (
+    <div className="min-h-screen bg-white">
+      {/* 1. Header Section */}
+      <section
+        className="bg-gradient-to-b from-[#00114d] to-[#000b33] text-white pt-40 pb-24 px-6 relative overflow-hidden">
+        <FloatingStars color="white"/>
+        <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+          <Image alt="À propos de Finavia" fill className="object-cover" src={aboutHero}/>
+        </div>
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-[#00114d] via-[#00114d]/90 to-transparent z-0 pointer-events-none"></div>
 
-                <div className="max-w-7xl mx-auto text-center relative z-10">
-          <span className="text-[#e51990] font-bold text-sm uppercase tracking-wider bg-white/10 px-4 py-1 rounded-full mb-6 inline-block">
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <span
+            className="text-[#e51990] font-bold text-sm uppercase tracking-wider bg-white/10 px-4 py-1 rounded-full mb-6 inline-block">
             Notre Identité
           </span>
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 tracking-tight">
-                        Transformez et modernisez<br />votre direction financière
-                    </h1>
-                    <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto font-light leading-relaxed">
-                        Nous sommes convaincues que la direction financière doit être un moteur de pilotage et de performance. Finavia accompagne les entreprises sur le terrain, en combinant expertise humaine, structuration financière et outils intelligents, pour transformer la finance en un levier de croissance concret.
-                    </p>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 tracking-tight">
+            Transformez et modernisez<br/>votre direction financière
+          </h1>
+          <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto font-light leading-relaxed">
+            Nous sommes convaincues que la direction financière doit être un moteur de pilotage et de performance.
+            Finavia accompagne les entreprises sur le terrain, en combinant expertise humaine, structuration financière
+            et outils intelligents, pour transformer la finance en un levier de croissance concret.
+          </p>
+        </div>
+      </section>
+
+      {/* 2. Mission / Vision Section */}
+      <section className="py-24 px-6 bg-white relative overflow-hidden">
+        <FloatingStars color="pink"/>
+        <div className="absolute top-0 right-0 w-20 h-full bg-blue-50/50 skew-x-12 opacity-50"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <h2 className="text-4xl font-bold text-[#07036e]">Notre Mission</h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Chez FINAVIA, notre mission est claire : <span className="font-bold text-[#07036e]">accompagner les entreprises à bâtir une direction finance moderne</span> efficace
+                et alignée sur leurs ambitions.
+                <br/><br/>
+                Du diagnostic à l'implémentation d'outils digitaux, nous pilotons l’évolution des dispositifs finance
+                pour automatiser, sécuriser et fiabiliser leur gestion financière.
+              </p>
+
+              <div className="bg-blue-50 rounded-2xl p-8 border-l-4 border-[#e51990]">
+                <h3 className="text-2xl font-bold text-[#07036e] mb-4">Notre Vision</h3>
+                <p className="text-gray-600 font-medium italic">
+                  "Devenir le partenaire de référence pour la transformation digitale des directions financières en
+                  France, en alliant expertise humaine et puissance technologique."
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {ABOUT_PAGE_DATA.values.map((val, idx) => (
+                <div key={idx}
+                     className="bg-white rounded-2xl p-6 shadow-lg border border-blue-100 hover:shadow-xl transition-shadow group">
+                  <div className="text-[#e51990] mb-4 transform group-hover:scale-110 transition-transform">
+                    <val.icon size={32}/>
+                  </div>
+                  <h4 className="text-xl font-bold text-[#07036e] mb-2">{val.title}</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">{val.text}</p>
                 </div>
-            </section>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-            {/* 2. Mission / Vision Section */}
-            <section className="py-24 px-6 bg-white relative overflow-hidden">
-                <FloatingStars color="pink" />
-                <div className="absolute top-0 right-0 w-20 h-full bg-blue-50/50 skew-x-12 opacity-50"></div>
-                <div className="max-w-7xl mx-auto relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div className="space-y-8">
-                            <h2 className="text-4xl font-bold text-[#07036e]">Notre Mission</h2>
-                            <p className="text-lg text-gray-600 leading-relaxed">
-                                Chez FINAVIA, notre mission est claire : <span className="font-bold text-[#07036e]">accompagner les entreprises à bâtir une direction finance moderne</span> efficace et alignée sur leurs ambitions.
-                                <br /><br />
-                                Du diagnostic à l'implémentation d'outils digitaux, nous pilotons l’évolution des dispositifs finance pour automatiser, sécuriser et fiabiliser leur gestion financière.
-                            </p>
+      {/* 3. Founders Section */}
+      <section
+        className="py-24 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)'
+        }}
+      >
+        <FloatingStars color="white"/>
+        <div
+          className="absolute top-0 right-0 w-96 h-96 bg-[#e51990]/20 rounded-full filter blur-[80px] -translate-y-1/2 translate-x-1/2"/>
+        <div
+          className="absolute bottom-0 left-0 w-96 h-96 bg-[#00c2ff]/10 rounded-full filter blur-[80px] translate-y-1/2 -translate-x-1/2"/>
 
-                            <div className="bg-blue-50 rounded-2xl p-8 border-l-4 border-[#e51990]">
-                                <h3 className="text-2xl font-bold text-[#07036e] mb-4">Notre Vision</h3>
-                                <p className="text-gray-600 font-medium italic">
-                                    "Devenir le partenaire de référence pour la transformation digitale des directions financières en France, en alliant expertise humaine et puissance technologique."
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            {ABOUT_PAGE_DATA.values.map((val, idx) => (
-                                <div key={idx} className="bg-white rounded-2xl p-6 shadow-lg border border-blue-100 hover:shadow-xl transition-shadow group">
-                                    <div className="text-[#e51990] mb-4 transform group-hover:scale-110 transition-transform">
-                                        <val.icon size={32} />
-                                    </div>
-                                    <h4 className="text-xl font-bold text-[#07036e] mb-2">{val.title}</h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed">{val.text}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* 3. Founders Section */}
-            <section className="py-24 px-6 bg-[#07036e] relative overflow-hidden">
-                <FloatingStars color="white" />
-                <div className="absolute top-0 right-0 w-96 h-96 bg-[#e51990]/20 rounded-full filter blur-[80px] -translate-y-1/2 translate-x-1/2" />
-                <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00c2ff]/10 rounded-full filter blur-[80px] translate-y-1/2 -translate-x-1/2" />
-
-                <div className="max-w-7xl mx-auto relative z-10">
-                    <div className="text-center mb-16">
-            <span className="text-[#e51990] font-bold text-sm uppercase tracking-wider bg-white/10 px-4 py-1 rounded-full backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <span
+              className="text-[#e51990] font-bold text-sm uppercase tracking-wider bg-white/10 px-4 py-1 rounded-full backdrop-blur-sm">
               Leadership
             </span>
-                        <h2 className="text-4xl md:text-5xl font-bold mt-6 text-white">
-                            Rencontrez nos fondatrices
-                        </h2>
-                        <p className="mt-4 text-lg text-white/80 font-light">
-                            +30 ans d'expérience cumulée au service de votre performance
-                        </p>
-                    </div>
+            <h2 className="text-4xl md:text-5xl font-bold mt-6 text-white">
+              Rencontrez nos fondatrices
+            </h2>
+            <p className="mt-4 text-lg text-white/80 font-light">
+              +30 ans d'expérience cumulée au service de votre performance
+            </p>
+          </div>
 
-                    <div className="grid md:grid-cols-2 gap-12">
-                        {ABOUT_PAGE_DATA.founders.map((founder, idx) => (
-                            <div key={idx} className="bg-white/5 backdrop-blur-md rounded-[2rem] overflow-hidden border border-white/10 flex flex-col md:flex-row group hover:bg-white/10 transition-colors duration-300">
-                                <div className="md:w-2/5 relative overflow-hidden h-80 md:h-auto">
-                                    <Image
-                                        src={founder.image}
-                                        alt={founder.name}
-                                        fill
-                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#07036e]/90 to-transparent md:hidden" />
-                                </div>
-                                <div className="md:w-3/5 p-8 flex flex-col justify-center">
-                                    <h3 className="text-2xl font-bold text-white mb-1">{founder.name}</h3>
-                                    <p className="text-[#e51990] font-bold text-sm mb-4 uppercase tracking-wide">{founder.role}</p>
-                                    <p className="text-white/80 mb-6 leading-relaxed font-light text-sm">
-                                        {founder.desc}
-                                    </p>
-                                    <a
-                                        href={founder.linkedin}
-                                        target="_blank"
-                                        className="inline-flex items-center gap-2 text-white font-semibold hover:text-[#e51990] transition-colors mt-auto group/link"
-                                    >
-                                        <Linkedin size={20} />
-                                        Suivre sur LinkedIn
-                                        <ExternalLink size={16} className="opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" />
-                                    </a>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+          <div className="grid md:grid-cols-2 gap-12">
+            {ABOUT_PAGE_DATA.founders.map((founder, idx) => (
+              <div key={idx}
+                   className="bg-white/5 backdrop-blur-md rounded-[2rem] overflow-hidden border border-white/10 flex flex-col md:flex-row group hover:bg-white/10 transition-colors duration-300">
+                <div className="md:w-2/5 relative overflow-hidden h-80 md:h-auto">
+                  <Image
+                    src={founder.image}
+                    alt={founder.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#07036e]/90 to-transparent md:hidden"/>
                 </div>
-            </section>
-
-            {/* 4. CSR & Commitments Section */}
-            <section className="py-24 px-6 relative overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <Image
-                        alt="Lush green forest background representing ecology"
-                        fill
-                        className="object-cover"
-                        src={engagementsBgImg}
-                    />
-                    <div className="absolute inset-0 bg-green-900/40 mix-blend-multiply"></div>
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
+                <div className="md:w-3/5 p-8 flex flex-col justify-center">
+                  <h3 className="text-2xl font-bold text-white mb-1">{founder.name}</h3>
+                  <p className="text-[#e51990] font-bold text-sm mb-4 uppercase tracking-wide">{founder.role}</p>
+                  <p className="text-white/80 mb-6 leading-relaxed font-light text-sm">
+                    {founder.desc}
+                  </p>
+                  <a
+                    href={founder.linkedin}
+                    target="_blank"
+                    className="inline-flex items-center gap-2 text-white font-semibold hover:text-[#e51990] transition-colors mt-auto group/link"
+                  >
+                    <Linkedin size={20}/>
+                    Suivre sur LinkedIn
+                    <ExternalLink size={16}
+                                  className="opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all"/>
+                  </a>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                <div className="max-w-7xl mx-auto relative z-10 text-center text-white">
-          <span className="text-green-300 font-bold text-sm uppercase tracking-wider bg-white/10 px-4 py-1 rounded-full mb-6 inline-block backdrop-blur-sm border border-green-400/30">
+      {/* 4. CSR & Commitments Section */}
+      <section className="py-24 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            alt="Lush green forest background representing ecology"
+            fill
+            className="object-cover"
+            src={engagementsBgImg}
+          />
+          <div className="absolute inset-0 bg-green-900/40 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10 text-center text-white">
+          <span
+            className="text-green-300 font-bold text-sm uppercase tracking-wider bg-white/10 px-4 py-1 rounded-full mb-6 inline-block backdrop-blur-sm border border-green-400/30">
             Responsabilité Sociétale
           </span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Nos Engagements RSE</h2>
-                    <p className="text-lg text-green-50 font-medium mb-12 leading-relaxed max-w-3xl mx-auto">
-                        Au-delà de la performance financière, nous nous engageons pour un impact positif.
-                        FINAVIA intègre les critères ESG au cœur de sa stratégie.
-                    </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Nos Engagements RSE</h2>
+          <p className="text-lg text-green-50 font-medium mb-12 leading-relaxed max-w-3xl mx-auto">
+            Au-delà de la performance financière, nous nous engageons pour un impact positif.
+            FINAVIA intègre les critères ESG au cœur de sa stratégie.
+          </p>
 
-                    <div className="grid md:grid-cols-3 gap-8 text-left">
-                        {ABOUT_PAGE_DATA.commitments.map((item, idx) => (
-                            <div key={idx} className="p-8 rounded-2xl bg-white/95 backdrop-blur-sm border border-white/20 shadow-xl hover:-translate-y-1 transition-transform duration-300">
-                                <div className={`w-14 h-14 rounded-full flex items-center justify-center mb-6 ${item.bgClass} ${item.iconClass}`}>
-                                    <item.icon size={28} />
-                                </div>
-                                <h4 className="text-xl font-bold text-[#07036e] mb-3">{item.title}</h4>
-                                <p className="text-gray-700 leading-relaxed text-sm">{item.text}</p>
-                            </div>
-                        ))}
-                    </div>
+          <div className="grid md:grid-cols-3 gap-8 text-left">
+            {ABOUT_PAGE_DATA.commitments.map((item, idx) => (
+              <div key={idx}
+                   className="p-8 rounded-2xl bg-white/95 backdrop-blur-sm border border-white/20 shadow-xl hover:-translate-y-1 transition-transform duration-300">
+                <div
+                  className={`w-14 h-14 rounded-full flex items-center justify-center mb-6 ${item.bgClass} ${item.iconClass}`}>
+                  <item.icon size={28}/>
                 </div>
-            </section>
-
-            {/* 5. Location Section */}
-            <section className="py-24 bg-white border-b border-gray-100 relative overflow-hidden">
-                <FloatingStars color="pink" />
-                <div className="max-w-7xl mx-auto px-6 relative z-10">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#07036e] mb-4">Où nous trouver</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
-                            Basés en Île-de-France, nous intervenons dans toute la France pour accompagner votre transformation.
-                        </p>
-                    </div>
-
-                    <div className="space-y-12">
-                        <div className="max-w-4xl mx-auto min-h-[500px] rounded-3xl overflow-hidden border border-gray-200 relative">
-                            <Image
-                                src="/images/aboutPage/map-france.webp"
-                                alt="Carte de la France"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-
-                        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                            <div className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-shadow duration-300">
-                                <ContactInfoItem icon={Mail} title="Email" detail={<a href="mailto:contact@finavia.fr" className="hover:text-[#e51990] transition-colors">contact@finavia.fr</a>} />
-                            </div>
-                            <div className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-shadow duration-300">
-                                <ContactInfoItem icon={Phone} title="Téléphone" detail={<a href="tel:0164620864" className="hover:text-[#e51990] transition-colors">01 64 62 08 64</a>} />
-                            </div>
-                            <div className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-shadow duration-300">
-                                <ContactInfoItem icon={Linkedin} title="LinkedIn" detail={<a href="https://www.linkedin.com/company/finavia-sas" target="_blank" rel="noopener noreferrer" className="hover:text-[#e51990] transition-colors flex items-center gap-2">Suivez-nous <ExternalLink size={14} /></a>} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* 6. Dedicated CTA Section */}
-            <StandardCTA
-                variant="navy"
-                isGradientTitle={true}
-                title="transformation finance"
-                description="Chaque entreprise est unique. Prenons 30 minutes pour analyser vos enjeux et identifier les leviers de croissance immédiats."
-                buttonHref="https://calendly.com/contact-finavia/30min"
-                showSecondaryButton={true}
-                showStatus={true}
-                buttonStyle={{ backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' }}
-            />
+                <h4 className="text-xl font-bold text-[#07036e] mb-3">{item.title}</h4>
+                <p className="text-gray-700 leading-relaxed text-sm">{item.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
-    );
+      </section>
+
+      {/* 5. Location Section */}
+      <section className="py-24 bg-white border-b border-gray-100 relative overflow-hidden">
+        <FloatingStars color="pink"/>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#07036e] mb-4">Où nous trouver</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Basés en Île-de-France, nous intervenons dans toute la France pour accompagner votre transformation.
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            <div
+              className="max-w-4xl mx-auto aspect-auto min-h-[420px] sm:aspect-auto sm:min-h-[500px] rounded-3xl overflow-hidden border border-gray-200 relative">
+              <Image
+                src="/images/aboutPage/map-france.jpeg"
+                alt="Carte de la France"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 640px) 92vw, (max-width: 1024px) 80vw, 896px"
+              />
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div
+                className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-shadow duration-300">
+                <ContactInfoItem icon={Mail} title="Email" detail={<a href="mailto:contact@finavia.fr"
+                                                                      className="hover:text-[#e51990] transition-colors">contact@finavia.fr</a>}/>
+              </div>
+              <div
+                className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-shadow duration-300">
+                <ContactInfoItem icon={Phone} title="Téléphone"
+                                 detail={<a href="tel:0164620864" className="hover:text-[#e51990] transition-colors">01
+                                   64 62 08 64</a>}/>
+              </div>
+              <div
+                className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-shadow duration-300">
+                <ContactInfoItem icon={Linkedin} title="LinkedIn"
+                                 detail={<a href="https://www.linkedin.com/company/finavia-sas" target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="hover:text-[#e51990] transition-colors flex items-center gap-2">Suivez-nous <ExternalLink
+                                   size={14}/></a>}/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Dedicated CTA Section */}
+      <StandardCTA
+        variant="navy"
+        isGradientTitle={true}
+        title="transformation financière"
+        description="Chaque entreprise est unique. Prenons 30 minutes pour analyser vos enjeux et identifier les leviers de croissance immédiats."
+        buttonHref="https://calendly.com/contact-finavia/30min"
+        showSecondaryButton={true}
+        showStatus={true}
+        buttonStyle={{backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)'}}
+      />
+    </div>
+  );
 }
 
 interface ContactInfoItemProps {
-    icon: React.ComponentType<{ size?: number }>;
-    title: string;
-    detail: React.ReactNode;
+  icon: React.ComponentType<{ size?: number }>;
+  title: string;
+  detail: React.ReactNode;
 }
 
-function ContactInfoItem({ icon: Icon, title, detail }: ContactInfoItemProps) {
-    return (
-        <div className="flex items-start gap-4 mb-6 last:mb-0">
-            <div className="w-12 h-12 bg-[#07036e]/10 text-[#07036e] rounded-full flex items-center justify-center shrink-0">
-                <Icon size={24} />
-            </div>
-            <div>
-                <h4 className="font-bold text-[#07036e] text-lg mb-1">{title}</h4>
-                <div className="text-gray-600 leading-relaxed text-sm">
-                    {detail}
-                </div>
-            </div>
+function ContactInfoItem({icon: Icon, title, detail}: ContactInfoItemProps) {
+  return (
+    <div className="flex items-start gap-4 mb-6 last:mb-0">
+      <div className="w-12 h-12 bg-[#07036e]/10 text-[#07036e] rounded-full flex items-center justify-center shrink-0">
+        <Icon size={24}/>
+      </div>
+      <div>
+        <h4 className="font-bold text-[#07036e] text-lg mb-1">{title}</h4>
+        <div className="text-gray-600 leading-relaxed text-sm">
+          {detail}
         </div>
-    );
+      </div>
+    </div>
+  );
 }

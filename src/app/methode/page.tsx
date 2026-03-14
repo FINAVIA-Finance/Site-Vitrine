@@ -150,7 +150,7 @@ export default function MethodPage() {
             {/* 5. CTA Section */}
             <StandardCTA
                 variant="light"
-                title="Planifiez un diagnostic gratuit"
+                title="Planifiez un diagnostic"
                 description="30 minutes pour échanger sur vos enjeux et identifier les leviers de performance."
                 buttonHref="/contact"
             />

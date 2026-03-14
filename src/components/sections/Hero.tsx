@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Play } from 'lucide-react';
-import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
     return (
@@ -73,8 +72,8 @@ const Hero = () => {
                         </h1>
 
                         <p className="text-lg md:text-xl text-gray-600 relative z-10 leading-[1.4]">
-                            Finavia accompagne les dirigeants et directions financières des PME et ETI dans la structuration de leur fonction finance.
-                            Nous mettons en place des process clairs, des outils adaptés et une automatisation pertinente pour une gestion financière fiable et alignée avec vos enjeux business.
+                            Finavia accompagne les dirigeants et directions financières des PME et ETI dans la structuration et la modernisation de leur fonction finance.
+                            Nous mettons en place des process clairs, des outils adaptés et une automatisation pertinente pour déployer une finance augmentée : plus fiable, plus rapide et pleinement alignée avec vos enjeux business.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 relative z-10">
