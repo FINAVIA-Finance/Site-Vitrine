@@ -133,7 +133,7 @@ const Hero = () => {
             <ActionModal
                 isOpen={isResourceModalOpen}
                 onClose={() => setIsResourceModalOpen(false)}
-                title="Formulaire Lead magnet"
+                title="Télécharger le Guide pour clôturer à J+5"
                 description="Saisissez vos coordonnées pour recevoir votre document PDG ."
             >
                 <ResourceForm onSuccess={() => setIsResourceModalOpen(false)} />
