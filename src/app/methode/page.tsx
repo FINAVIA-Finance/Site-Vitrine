@@ -152,7 +152,7 @@ export default function MethodPage() {
                 variant="light"
                 title="Planifiez un diagnostic"
                 description="30 minutes pour échanger sur vos enjeux et identifier les leviers de performance."
-                buttonHref="/contact"
+                buttonHref="https://calendly.com/contact-finavia/30min"
             />
         </div>
     );

@@ -1,10 +1,16 @@
 "use client";
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { ActionModal } from '@/components/modals/ActionModal';
+import { ResourceForm } from '@/components/sections/ResourceForm';
 
 const Hero = () => {
+    const [isResourceModalOpen, setIsResourceModalOpen] = useState(false);
+
     return (
+        <>
         <section className="relative min-h-screen flex items-center justify-center pt-32 pb-32 px-6 overflow-hidden bg-white">
 
             {/* 1. Concentric Circles Background */}
@@ -76,26 +82,28 @@ const Hero = () => {
                             Nous mettons en place des process clairs, des outils adaptés et une automatisation pertinente pour déployer une finance augmentée : plus fiable, plus rapide et pleinement alignée avec vos enjeux business.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 relative z-10">
-                            <a href="https://calendly.com/contact-finavia/30min" target="_blank" rel="noopener noreferrer">
-                                <motion.div
-                                    whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(229, 25, 144, 0.3)' }}
-                                    whileTap={{ scale: 0.95 }}
-                                    className="px-8 py-4 text-white rounded-full font-semibold flex items-center justify-center gap-2 shadow-lg transition-all duration-300 cursor-pointer" style={{ backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' }}
-                                >
-                                    Planifiez un échange
-                                    <ArrowRight size={20} />
-                                </motion.div>
-                            </a>
+                        <div className="flex flex-col items-start gap-4 relative z-10 w-full max-w-[420px]">
+                            <motion.a
+                                href="https://calendly.com/contact-finavia/30min"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(229, 25, 144, 0.3)' }}
+                                whileTap={{ scale: 0.95 }}
+                                className="inline-flex w-full px-8 py-4 text-white rounded-full font-semibold items-center justify-center gap-2 shadow-lg transition-all duration-300 cursor-pointer"
+                                style={{ backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)' }}
+                            >
+                                Planifiez un échange
+                                <ArrowRight size={20} />
+                            </motion.a>
 
-                            {/*<motion.button*/}
-                            {/*    whileHover={{ scale: 1.05 }}*/}
-                            {/*    whileTap={{ scale: 0.95 }}*/}
-                            {/*    className="px-8 py-4 bg-white text-[#07036e] rounded-full font-semibold flex items-center justify-center gap-2 border-2 border-[#07036e] hover:bg-[#07036e] hover:text-white transition-all duration-300"*/}
-                            {/*>*/}
-                            {/*    <Play size={20} />*/}
-                            {/*    Voir la démo*/}
-                            {/*</motion.button>*/}
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                onClick={() => setIsResourceModalOpen(true)}
+                                className="w-full px-8 py-4 bg-white text-[#07036e] rounded-full font-semibold flex items-center justify-center gap-2 border-2 border-[#07036e] hover:bg-[#07036e] hover:text-white transition-all duration-300 cursor-pointer"
+                            >
+                                Téléchargez le Guide « Clôturer à J+5 »
+                            </motion.button>
                         </div>
                     </motion.div>
 
@@ -122,6 +130,15 @@ const Hero = () => {
                 </div>
             </div>
         </section>
+            <ActionModal
+                isOpen={isResourceModalOpen}
+                onClose={() => setIsResourceModalOpen(false)}
+                title="Formulaire Lead magnet"
+                description="Saisissez vos coordonnées pour recevoir votre document PDG ."
+            >
+                <ResourceForm onSuccess={() => setIsResourceModalOpen(false)} />
+            </ActionModal>
+        </>
     );
 };
 
