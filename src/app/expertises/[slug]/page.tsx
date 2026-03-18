@@ -181,7 +181,7 @@ export default function ExpertiseDetailPage() {
                                 <ul className="space-y-3 text-sm text-gray-600">
                                     <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#e51990]" /> Expertise Senior</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#e51990]" /> Approche terrain</li>
-                                    <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#e51990]" /> Outils digitaux</li>
+                                    <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#e51990]" /> Outils digitaux & IA</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#e51990]" /> Réactivité totale</li>
                                 </ul>
                             </div>

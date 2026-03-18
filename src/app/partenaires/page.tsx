@@ -40,7 +40,7 @@ export default function PartnersPage() {
             </p>
             <Button asChild className="text-white text-lg px-8 py-6 rounded-full shadow-lg hover:opacity-90"
                     style={{backgroundImage: 'linear-gradient(to right, #23135f 15%, #d0006f 100%)'}}>
-              <Link href="https://calendly.com/contact-finavia/30min">Échanger sur votre contexte <ArrowRight
+              <Link target="_blank" href="https://calendly.com/contact-finavia/30min">Échanger sur votre contexte <ArrowRight
                 className="ml-2"/></Link>
             </Button>
           </motion.div>
@@ -106,7 +106,7 @@ export default function PartnersPage() {
                 </div>
                 <Button asChild variant="outline"
                         className="mt-8 border-[#07036e] text-[#07036e] hover:bg-[#07036e] hover:text-white transition-all">
-                  <Link href="https://calendly.com/contact-finavia/30min">Échanger sur votre contexte</Link>
+                  <Link target="_blank" href="https://calendly.com/contact-finavia/30min">Échanger sur votre contexte</Link>
                 </Button>
               </div>
               <div
