@@ -134,7 +134,7 @@ const Hero = () => {
                 isOpen={isResourceModalOpen}
                 onClose={() => setIsResourceModalOpen(false)}
                 title="Télécharger le Guide pour clôturer à J+5"
-                description="Saisissez vos coordonnées pour recevoir votre document PDG ."
+                description="Saisissez vos coordonnées pour recevoir votre document PDF ."
             >
                 <ResourceForm onSuccess={() => setIsResourceModalOpen(false)} />
             </ActionModal>

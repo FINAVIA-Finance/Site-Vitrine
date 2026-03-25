@@ -281,7 +281,7 @@ export default function ExpertiseDetailPage() {
                 description={
                     modalConfig.view === 'audit'
                         ? "Diagnostic court, sans engagement, destiné à être intégré directement sur le site internet."
-                        : "Saisissez vos coordonnées pour recevoir votre document PDG ."
+                        : "Saisissez vos coordonnées pour recevoir votre document PDF ."
                 }
             >
                 {modalConfig.view === 'audit' ? (
