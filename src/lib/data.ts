@@ -5,7 +5,6 @@ import { Leaf, Scale, GraduationCap, Target, Users, Zap, Clock, ShieldCheck,
     Cpu, FileText, Shield, FileCheck, Cookie, Lock,
     Trophy, Lightbulb, Handshake } from 'lucide-react';
 import partnerMyReport from '@/../public/images/homePage/partner-myreport.png'
-import partnerKatech from '@/../public/images/homePage/partner-katech.png'
 import partnerAgycap from '@/../public/images/homePage/partner-agycap.png'
 import partnerFinthesis from '@/../public/images/homePage/partner-finthesis.png'
 import partnerFygr from '@/../public/images/homePage/partner-fygr.png'
