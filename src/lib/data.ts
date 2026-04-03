@@ -52,7 +52,6 @@ import expertisesCtaImg from '@/../public/images/expertisePage/expertisesCta.png
 
 export const PARTNERS = [
     { name: 'My Report', url: partnerMyReport },
-    { name: 'Katech', url: partnerKatech },
     { name: 'Sage', url: partnerSage },
     { name: 'Pennylane', url: partnerPennylane },
     { name: 'Spendesk', url: partnerSpendesk },
