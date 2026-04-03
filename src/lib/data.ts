@@ -682,7 +682,6 @@ export const PARTNER_LOGOS = {
     finthesis: partnerFinthesis,
     myreport: partnerMyReport,
     yooz: partnerYooz,
-    katech: partnerKatech,
     copilot: copilotFullLogo,
     openai: openaiLogo,
     claudai: claudaiLogo,
