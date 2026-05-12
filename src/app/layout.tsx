@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Inter } from "next/font/google"; // Import Inter instead of Geist
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
@@ -11,9 +12,12 @@ const inter = Inter({
     display: 'swap',
 });
 
-export const metadata = {
-    title: "FINAVIA - Structurer. Digitaliser. Automatiser.",
-    description: "Cabinet d'expertise en conseil financier",
+export const metadata: Metadata = {
+    title: {
+        default: "Finance augmentée pour PME en croissance | Finavia",
+        template: "%s | Finavia",
+    },
+    description: "Finavia accompagne les PME et ETI dans la structuration, la digitalisation et l'automatisation de leur fonction finance avec une approche terrain et IA utile.",
     icons: {
         icon: "/images/favicon.png",
     },
