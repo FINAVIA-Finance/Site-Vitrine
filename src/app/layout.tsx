@@ -14,7 +14,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
     title: {
-        default: "Finance augmentée pour PME en croissance | Finavia",
+        default: "Structurer, digitaliser et automatiser la finance augmentée | Finavia",
         template: "%s | Finavia",
     },
     description: "Finavia accompagne les PME et ETI dans la structuration, la digitalisation et l'automatisation de leur fonction finance avec une approche terrain et IA utile.",
