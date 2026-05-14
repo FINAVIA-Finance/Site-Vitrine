@@ -7,6 +7,8 @@ import Footer from "@/components/layout/Footer";
 import {Toaster} from "@/components/ui/toaster";
 import CookieBanner from "@/components/cookies/CookieBanner";
 
+const GTM_ID = "GTM-M5J9WQ4R";
+
 // Set up Inter font
 const inter = Inter({
     subsets: ["latin"],
@@ -27,16 +29,25 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="fr" className="scroll-smooth">
-        <Script
-            id="google-tag-manager"
-            src="https://www.googletagmanager.com/gtm.js?id=GTM-M5J9WQ4R"
-            strategy="afterInteractive"
-        />
+        <Script id="google-tag-manager" strategy="beforeInteractive">
+            {`
+            (function(w,d,s,l,i){
+                w[l]=w[l]||[];
+                w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+                var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),
+                    dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;
+                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${GTM_ID}');
+            `}
+        </Script>
         {/* Apply the inter class to the body */}
         <body className={`${inter.className} antialiased min-h-screen bg-white`} suppressHydrationWarning={true}>
         <noscript>
             <iframe
-                src="https://www.googletagmanager.com/ns.html?id=GTM-M5J9WQ4R"
+                src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
                 height="0"
                 width="0"
                 style={{ display: "none", visibility: "hidden" }}
