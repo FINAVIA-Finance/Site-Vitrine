@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google"; // Import Inter instead of Geist
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
@@ -26,8 +27,21 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="fr" className="scroll-smooth">
+        <Script
+            id="google-tag-manager"
+            src="https://www.googletagmanager.com/gtm.js?id=GTM-M5J9WQ4R"
+            strategy="afterInteractive"
+        />
         {/* Apply the inter class to the body */}
         <body className={`${inter.className} antialiased min-h-screen bg-white`} suppressHydrationWarning={true}>
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-M5J9WQ4R"
+                height="0"
+                width="0"
+                style={{ display: "none", visibility: "hidden" }}
+            />
+        </noscript>
         <Navbar />
         <main>{children}</main>
         <Toaster/>
