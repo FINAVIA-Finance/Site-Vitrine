@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://www.finavia.fr";
+const siteUrl = "https://finavia.fr";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const currentDate = new Date();
