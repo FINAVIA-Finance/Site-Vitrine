@@ -8,7 +8,7 @@ import {Toaster} from "@/components/ui/toaster";
 import CookieBanner from "@/components/cookies/CookieBanner";
 
 const GTM_ID = "GTM-M5J9WQ4R";
-const SITE_URL = "https://www.finavia.fr";
+const SITE_URL = "https://finavia.fr";
 
 // Set up Inter font
 const inter = Inter({
