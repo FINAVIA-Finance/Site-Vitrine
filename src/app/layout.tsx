@@ -8,6 +8,7 @@ import {Toaster} from "@/components/ui/toaster";
 import CookieBanner from "@/components/cookies/CookieBanner";
 
 const GTM_ID = "GTM-M5J9WQ4R";
+const SITE_URL = "https://www.finavia.fr";
 
 // Set up Inter font
 const inter = Inter({
@@ -16,11 +17,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL(SITE_URL),
     title: {
         default: "Structurer, digitaliser et automatiser la finance augmentée | Finavia",
         template: "%s | Finavia",
     },
     description: "Finavia accompagne les PME et ETI dans la structuration, la digitalisation et l'automatisation de leur fonction finance avec une approche terrain et IA utile.",
+    alternates: {
+        canonical: "/",
+    },
     icons: {
         icon: "/images/favicon.png",
     },
